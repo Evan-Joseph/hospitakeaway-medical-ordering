@@ -1,0 +1,23 @@
+{
+  "name": "MediOrder",
+  "short_name": "MediOrder",
+  "description": "Convenient food delivery for hospital patients and their families.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#E8F0F7",
+  "theme_color": "#75A3D1",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
