@@ -54,6 +54,23 @@ const createMockDatabase = () => {
           return () => console.log(`🔥 Mock: 取消监听 ${name}`);
         }
       }),
+      where: (field: string, operator: string, value: any) => ({
+        get: async () => {
+          console.log(`🔥 Mock: 查询 ${name} where ${field} ${operator} ${value}`);
+          return {
+            docs: [],
+            size: 0,
+            empty: true
+          };
+        },
+        onSnapshot: (callback: any, errorCallback?: any) => {
+          console.log(`🔥 Mock: 监听 ${name} 集合 where ${field} ${operator} ${value}`);
+          setTimeout(() => {
+            callback({ docs: [], size: 0, empty: true });
+          }, 100);
+          return () => console.log(`🔥 Mock: 取消监听 ${name}`);
+        }
+      }),
       get: async () => ({
         docs: [],
         size: 0,

@@ -103,8 +103,10 @@ export default function AdminQrCodesPage() {
   const fetchQrCodes = async () => {
     setIsLoading(true);
     try {
-      const q = query(collection(db, "bed-qrcodes"), firestoreOrderBy("createdAt", "desc"));
-      const querySnapshot = await getDocs(q);
+      // 使用适配器系统获取二维码数据
+      const qrCodesCollectionRef = db.collection("bed-qrcodes");
+      const q = qrCodesCollectionRef.orderBy("createdAt", "desc");
+      const querySnapshot = await q.get();
       const codes = querySnapshot.docs.map(docSnap => {
         const data = docSnap.data();
         return {

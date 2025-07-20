@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { useAuth } from '@/contexts/auth-context';
 import { db } from '@/lib/firebase';
-import { doc, getDoc, updateDoc } from 'firebase/firestore';
+// 移除Firebase导入 - 使用适配器系统
 import type { Restaurant, RestaurantPaymentMethod } from '@/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -69,10 +69,11 @@ export default function MerchantSettingsPage() {
     setIsLoadingPage(true);
     setPageError(null);
     try {
-      const restaurantRef = doc(db, "restaurants", currentUser.uid);
-      const docSnap = await getDoc(restaurantRef);
+      // 使用适配器系统获取餐厅数据
+      const restaurantRef = db.doc(`restaurants/${currentUser.uid}`);
+      const docSnap = await restaurantRef.get();
       if (docSnap.exists()) {
-        const data = docSnap.data() as Restaurant;
+        const data = docSnap.data() as any;
         setRestaurant(data);
         setRestaurantNameInput(data.name);
         setRestaurantCuisineInput(data.cuisine);
@@ -313,7 +314,8 @@ export default function MerchantSettingsPage() {
 
     setIsSaving(true);
     try {
-      const restaurantRef = doc(db, "restaurants", currentUser.uid);
+      // 使用适配器系统更新餐厅数据
+      const restaurantRef = db.doc(`restaurants/${currentUser.uid}`);
       const updatedRestaurantData: Partial<Restaurant> = {
         name: restaurantNameInput.trim(),
         cuisine: restaurantCuisineInput.trim(),
@@ -325,7 +327,7 @@ export default function MerchantSettingsPage() {
         updatedRestaurantData.imageUrl = newRestaurantImageUrl;
       }
 
-      await updateDoc(restaurantRef, updatedRestaurantData);
+      await restaurantRef.update(updatedRestaurantData);
       
       setRestaurant(prev => {
         if (!prev) return null;

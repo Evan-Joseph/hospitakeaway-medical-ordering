@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Button } from '@/components/ui/button';
 import { ListFilter, Search, ArrowUpDown, Loader2, AlertTriangle } from 'lucide-react';
 import { db } from '@/lib/firebase';
-import { collection, getDocs, query, where } from 'firebase/firestore'; // Added query and where
+// 移除Firebase导入 - 使用适配器系统
 import { Skeleton } from '@/components/ui/skeleton';
 
 const RestaurantCardSkeleton = () => (
@@ -42,11 +42,11 @@ export default function RestaurantsPage() {
       setLoading(true);
       setError(null);
       try {
-        const restaurantsCollectionRef = collection(db, "restaurants");
-        // Query for restaurants where status is 'Approved'
-        const q = query(restaurantsCollectionRef, where("status", "==", "Approved"));
-        const querySnapshot = await getDocs(q);
-        const fetchedRestaurants = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Restaurant));
+        // 使用适配器系统获取餐厅数据
+        const restaurantsCollectionRef = db.collection("restaurants");
+        const q = restaurantsCollectionRef.where("status", "==", "Approved");
+        const querySnapshot = await q.get();
+        const fetchedRestaurants = querySnapshot.docs.map((doc: any) => ({ id: doc.id, ...doc.data() } as Restaurant));
         setAllRestaurants(fetchedRestaurants);
       } catch (err) {
         console.error("获取餐馆数据出错:", err);
