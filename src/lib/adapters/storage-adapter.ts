@@ -4,6 +4,9 @@
  * 这个适配器使前端代码无需修改，只需替换底层存储服务
  */
 
+import { createOSSClient, generateOSSPath, FILE_CATEGORIES, type FileCategory } from '../oss-config';
+import type OSS from 'ali-oss';
+
 // 兼容 Firebase Storage 的类型定义
 export interface StorageReference {
   bucket: string;

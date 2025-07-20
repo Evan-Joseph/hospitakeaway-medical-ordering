@@ -3,23 +3,15 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
-import { auth, db } from '@/lib/firebase'; 
-import type { User, AuthError } from 'firebase/auth';
-import { 
-  onAuthStateChanged, 
-  signInWithEmailAndPassword, 
-  signOut as firebaseSignOut,
-  createUserWithEmailAndPassword,
-  getIdTokenResult
-} from 'firebase/auth';
-import { doc, setDoc, serverTimestamp } from 'firebase/firestore'; 
+import { AuthAdapter, type User, type AuthError } from '@/lib/adapters/auth-adapter';
+import { DatabaseAdapter } from '@/lib/adapters/database-adapter';
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from 'next/navigation';
-import type { Restaurant, RestaurantStatus } from '@/types'; 
+import type { Restaurant, RestaurantStatus } from '@/types';
 
 interface AuthContextType {
   currentUser: User | null;
-  isAdmin: boolean | null; // null if status unknown, true if admin, false if not
+  isAdmin: boolean | null;
   loadingAuth: boolean;
   signInWithEmailPassword: (email: string, password: string) => Promise<User | null>;
   signUpWithEmailPasswordAndRestaurant: (
@@ -35,10 +27,12 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-// !!! IMPORTANT FOR ADMIN FUNCTIONALITY !!!
-// Replace with your actual admin email(s) for testing.
-// For production, use Firebase Custom Claims for robust role management.
-const ADMIN_EMAILS = ['admin@t.com', 'your-admin-email@domain.com']; 
+// 管理员邮箱列表
+const ADMIN_EMAILS = ['admin@t.com', 'your-admin-email@domain.com'];
+
+// 初始化适配器
+const authAdapter = new AuthAdapter();
+const dbAdapter = new DatabaseAdapter();
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
@@ -53,22 +47,15 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       setIsAdmin(false);
       return;
     }
-    // Simplified admin check (NOT FOR PRODUCTION)
-    // In production, use Firebase Custom Claims:
-    // try {
-    //   const idTokenResult = await getIdTokenResult(user);
-    //   setIsAdmin(idTokenResult.claims.admin === true);
-    // } catch (err) {
-    //   console.error("Error getting custom claims:", err);
-    //   setIsAdmin(false);
-    // }
+    // 简化的管理员检查
     const userIsAdmin = ADMIN_EMAILS.includes(user.email || '');
     setIsAdmin(userIsAdmin);
     console.log(`User ${user.email} is admin: ${userIsAdmin}`);
   }, []);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+    // 监听认证状态变化
+    const unsubscribe = authAdapter.onAuthStateChanged(async (user) => {
       setCurrentUser(user);
       await checkAdminStatus(user);
       setLoadingAuth(false);
@@ -79,7 +66,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       }
     });
     return () => unsubscribe();
-  }, [checkAdminStatus, isAdmin]); // Added isAdmin to dependency array for safety, though checkAdminStatus is useCallback
+  }, [checkAdminStatus, isAdmin]);
 
   const clearError = () => setError(null);
 
@@ -87,8 +74,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setLoadingAuth(true);
     setError(null);
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      // onAuthStateChanged will handle setCurrentUser and checkAdminStatus
+      const userCredential = await authAdapter.signInWithEmailAndPassword(email, password);
       toast({ title: "登录成功", description: "欢迎回来！" });
       setLoadingAuth(false);
       return userCredential.user;
@@ -111,7 +97,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setLoadingAuth(true);
     setError(null);
     try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await authAdapter.createUserWithEmailAndPassword(email, password);
       const user = userCredential.user;
 
       const newRestaurantData: Restaurant = { 
@@ -131,10 +117,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         status: 'Pending' as RestaurantStatus,
       };
       
-      const restaurantRef = doc(db, "restaurants", user.uid);
-      await setDoc(restaurantRef, newRestaurantData);
+      // 使用数据库适配器保存餐厅信息
+      await dbAdapter.setDoc(`restaurants/${user.uid}`, newRestaurantData);
 
-      // onAuthStateChanged will handle setCurrentUser and checkAdminStatus
       toast({ title: "注册成功!", description: "您的餐馆已创建。等待管理员审核。" });
       setLoadingAuth(false);
       return user;
@@ -152,10 +137,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setLoadingAuth(true);
     setError(null);
     try {
-      await firebaseSignOut(auth);
-      // onAuthStateChanged will set currentUser to null and isAdmin to false
+      await authAdapter.signOut();
       toast({ title: "已登出", description: "您已成功登出。" });
-      // Let individual pages handle redirection based on auth state
     } catch (err) {
       const authError = err as AuthError;
       console.error("登出出错:", authError);
@@ -171,7 +154,16 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ currentUser, isAdmin, loadingAuth, signInWithEmailPassword: signInWithEmailPasswordInternal, signUpWithEmailPasswordAndRestaurant, signOut, error, clearError }}>
+    <AuthContext.Provider value={{ 
+      currentUser, 
+      isAdmin, 
+      loadingAuth, 
+      signInWithEmailPassword: signInWithEmailPasswordInternal, 
+      signUpWithEmailPasswordAndRestaurant, 
+      signOut, 
+      error, 
+      clearError 
+    }}>
       {children}
     </AuthContext.Provider>
   );
