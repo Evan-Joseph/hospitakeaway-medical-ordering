@@ -6,16 +6,8 @@ import React, { createContext, useContext, useState, ReactNode, useEffect, useCa
 import { useToast } from "@/hooks/use-toast";
 import type { FavoriteItem } from '@/types';
 import { db } from '@/lib/firebase';
-import { 
-  collection, 
-  getDocs, 
-  setDoc, 
-  deleteDoc, 
-  doc, 
-  Timestamp,
-  query,
-  orderBy
-} from 'firebase/firestore';
+// 所有数据库操作方法现在通过适配器系统提供
+// 无需直接导入 firebase/firestore
 
 interface FavoritesContextType {
   favoriteItems: FavoriteItem[];
@@ -37,11 +29,12 @@ export const FavoritesProvider = ({ children }: { children: ReactNode }) => {
 
   const fetchFavorites = useCallback(async () => {
     setLoadingFavorites(true);
-    console.log("从Firestore获取收藏...");
+    console.log("从数据库获取收藏...");
     try {
-      const favoritesCollectionRef = collection(db, FAVORITES_COLLECTION_NAME);
-      const q = query(favoritesCollectionRef, orderBy("addedAt", "desc")); 
-      const querySnapshot = await getDocs(q);
+      // 使用适配器系统查询收藏
+      const favoritesCollectionRef = db.collection(FAVORITES_COLLECTION_NAME);
+      const q = favoritesCollectionRef.orderBy("addedAt", "desc");
+      const querySnapshot = await q.get();
       const fetchedFavorites = querySnapshot.docs.map(docSnap => {
         const data = docSnap.data();
         return {
@@ -53,7 +46,7 @@ export const FavoritesProvider = ({ children }: { children: ReactNode }) => {
       setFavoriteItems(fetchedFavorites);
       console.log("收藏获取成功:", fetchedFavorites.length);
     } catch (error) {
-      console.error("从Firestore获取收藏出错: ", error);
+      console.error("从数据库获取收藏出错: ", error);
       toast({
         title: "获取收藏失败",
         description: "无法加载您的收藏商品，请稍后再试。",
@@ -71,20 +64,21 @@ export const FavoritesProvider = ({ children }: { children: ReactNode }) => {
 
   const addFavorite = useCallback(async (itemId: string, restaurantId: string, itemName: string) => {
     const favoriteId = `${restaurantId}_${itemId}`;
-    console.log(`向Firestore添加收藏 ${favoriteId}`);
+    console.log(`向数据库添加收藏 ${favoriteId}`);
     try {
-      const favoriteDocRef = doc(db, FAVORITES_COLLECTION_NAME, favoriteId);
-      const newFavorite: FavoriteItem & { addedAt: Timestamp } = {
+      // 使用适配器系统设置文档
+      const favoriteDocRef = db.doc(`${FAVORITES_COLLECTION_NAME}/${favoriteId}`);
+      const newFavorite: FavoriteItem & { addedAt: Date } = {
         itemId,
         restaurantId,
         itemName,
-        addedAt: Timestamp.now(),
+        addedAt: new Date(),
       };
-      await setDoc(favoriteDocRef, newFavorite);
+      await favoriteDocRef.set(newFavorite);
       
       setFavoriteItems((prevItems) => {
         if (!prevItems.some(item => item.itemId === itemId && item.restaurantId === restaurantId)) {
-          return [{ itemId, restaurantId, itemName, addedAt: newFavorite.addedAt.toDate() }, ...prevItems]; // Keep local sort consistent
+          return [{ itemId, restaurantId, itemName, addedAt: newFavorite.addedAt }, ...prevItems]; // Keep local sort consistent
         }
         return prevItems;
       });
@@ -95,7 +89,7 @@ export const FavoritesProvider = ({ children }: { children: ReactNode }) => {
         });
       },0);
     } catch (error) {
-      console.error("向Firestore添加收藏出错: ", error);
+      console.error("向数据库添加收藏出错: ", error);
       setTimeout(() => {
       toast({
         title: "添加收藏失败",
@@ -108,11 +102,12 @@ export const FavoritesProvider = ({ children }: { children: ReactNode }) => {
 
   const removeFavorite = useCallback(async (itemId: string, restaurantId: string, itemName?: string) => {
     const favoriteId = `${restaurantId}_${itemId}`;
-    console.log(`从Firestore移除收藏 ${favoriteId}`);
+    console.log(`从数据库移除收藏 ${favoriteId}`);
     const itemNameToDisplay = itemName || favoriteItems.find(fav => fav.itemId === itemId && fav.restaurantId === restaurantId)?.itemName || "商品";
     try {
-      const favoriteDocRef = doc(db, FAVORITES_COLLECTION_NAME, favoriteId);
-      await deleteDoc(favoriteDocRef);
+      // 使用适配器系统删除文档
+      const favoriteDocRef = db.doc(`${FAVORITES_COLLECTION_NAME}/${favoriteId}`);
+      await favoriteDocRef.delete();
 
       setFavoriteItems((prevItems) => prevItems.filter(item => !(item.itemId === itemId && item.restaurantId === restaurantId)));
       setTimeout(() => {
@@ -123,7 +118,7 @@ export const FavoritesProvider = ({ children }: { children: ReactNode }) => {
         });
       },0);
     } catch (error) {
-      console.error("从Firestore移除收藏出错: ", error);
+      console.error("从数据库移除收藏出错: ", error);
       setTimeout(() => {
         toast({
           title: "移除收藏失败",

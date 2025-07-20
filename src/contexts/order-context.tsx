@@ -4,21 +4,9 @@
 
 import type { Order, OrderStatus, CartItemType, Promotion } from '@/types';
 import React, { createContext, useContext, useState, ReactNode, useEffect, useCallback } from 'react';
-import { db } from '@/lib/firebase'; 
-import {
-  collection,
-  addDoc,
-  doc,
-  updateDoc,
-  serverTimestamp,
-  query,
-  orderBy,
-  Timestamp,
-  getDoc,
-  getDocs, 
-  onSnapshot, 
-  Unsubscribe 
-} from 'firebase/firestore';
+import { db } from '@/lib/firebase';
+// 所有数据库操作方法现在通过适配器系统提供
+// 无需直接导入 firebase/firestore
 import { useToast } from "@/hooks/use-toast";
 
 
@@ -55,9 +43,10 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
   const fetchOrdersInitial = useCallback(async () => {
     setLoadingOrders(true);
     try {
-      const ordersCollectionRef = collection(db, "orders");
-      const q = query(ordersCollectionRef, orderBy("orderDate", "desc"));
-      const querySnapshot = await getDocs(q); 
+      // 使用适配器系统查询订单
+      const ordersCollectionRef = db.collection("orders");
+      const q = ordersCollectionRef.orderBy("orderDate", "desc");
+      const querySnapshot = await q.get();
       const fetchedOrders = querySnapshot.docs.map(docSnap => {
         const data = docSnap.data();
         return {
@@ -65,7 +54,7 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
           items: (data.items || []) as CartItemType[],
           totalAmount: data.totalAmount,
           status: data.status as OrderStatus,
-          orderDate: (data.orderDate as Timestamp)?.toDate().toISOString() || new Date().toISOString(),
+          orderDate: data.orderDate?.toDate?.()?.toISOString() || new Date().toISOString(),
           deliveryLocation: data.deliveryLocation,
           verificationCode: data.verificationCode,
           restaurantName: data.restaurantName,
@@ -80,7 +69,7 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
       });
       setOrders(fetchedOrders);
     } catch (error) {
-      console.error("从Firestore初次获取订单出错: ", error);
+      console.error("从数据库初次获取订单出错: ", error);
       toast({
         title: "获取订单失败",
         description: "无法加载订单历史，请稍后再试。",
@@ -95,10 +84,11 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     setLoadingOrders(true);
-    const ordersCollectionRef = collection(db, "orders");
-    const q = query(ordersCollectionRef, orderBy("orderDate", "desc"));
+    // 使用适配器系统进行实时监听
+    const ordersCollectionRef = db.collection("orders");
+    const q = ordersCollectionRef.orderBy("orderDate", "desc");
 
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+    const unsubscribe = q.onSnapshot((querySnapshot) => {
       const fetchedOrders = querySnapshot.docs.map(docSnap => {
         const data = docSnap.data();
         return {
@@ -106,7 +96,7 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
           items: (data.items || []) as CartItemType[],
           totalAmount: data.totalAmount,
           status: data.status as OrderStatus,
-          orderDate: (data.orderDate as Timestamp)?.toDate().toISOString() || new Date().toISOString(),
+          orderDate: data.orderDate?.toDate?.()?.toISOString() || new Date().toISOString(),
           deliveryLocation: data.deliveryLocation,
           verificationCode: data.verificationCode,
           restaurantName: data.restaurantName,
@@ -121,9 +111,9 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
       });
       setOrders(fetchedOrders);
       setLoadingOrders(false); 
-      console.log("通过onSnapshot更新订单:", fetchedOrders.length);
+      console.log("通过实时监听更新订单:", fetchedOrders.length);
     }, (error) => {
-      console.error("onSnapshot订单出错: ", error);
+      console.error("实时监听订单出错: ", error);
       setTimeout(() => {
         toast({
           title: "实时同步错误",
@@ -141,9 +131,9 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
   }, [toast]);
 
   const addOrder = async (orderData: Omit<Order, 'id' | 'orderDate' | 'rating'>): Promise<Order | null> => {
-    console.log("向Firestore添加订单:", orderData);
+    console.log("向数据库添加订单:", orderData);
     try {
-      const ordersCollectionRef = collection(db, "orders");
+      const ordersCollectionRef = db.collection("orders");
       const docDataWithTimestamp: any = { 
         ...orderData,
         items: orderData.items.map(item => ({
@@ -156,7 +146,7 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
           restaurantId: item.restaurantId,
           quantity: item.quantity,
         })),
-        orderDate: serverTimestamp(),
+        orderDate: db.serverTimestamp ? db.serverTimestamp() : new Date(),
         status: orderData.status || (orderData.paymentQrCodeUrl ? 'Pending Payment' : 'Order Placed')
       };
       
@@ -168,8 +158,9 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
       }
 
 
-      const docRef = await addDoc(ordersCollectionRef, docDataWithTimestamp);
-      const newDocSnap = await getDoc(docRef); 
+      // 使用适配器系统添加文档
+      const docRef = await ordersCollectionRef.add(docDataWithTimestamp);
+      const newDocSnap = await docRef.get(); 
       if (newDocSnap.exists()) {
         const dataFromDb = newDocSnap.data();
          if (!dataFromDb) {
@@ -180,7 +171,7 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
           items: (dataFromDb.items || []) as CartItemType[],
           totalAmount: dataFromDb.totalAmount,
           status: dataFromDb.status as OrderStatus,
-          orderDate: (dataFromDb.orderDate as Timestamp)?.toDate().toISOString() || new Date().toISOString(),
+          orderDate: dataFromDb.orderDate?.toDate?.()?.toISOString() || new Date().toISOString(),
           deliveryLocation: dataFromDb.deliveryLocation,
           verificationCode: dataFromDb.verificationCode,
           restaurantName: dataFromDb.restaurantName,
@@ -199,7 +190,7 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
       }
 
     } catch (error) {
-      console.error("向Firestore添加订单出错: ", error);
+      console.error("向数据库添加订单出错: ", error);
       setTimeout(() => {
         toast({
           title: "下单失败",
@@ -212,13 +203,14 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const updateOrderStatus = async (orderId: string, status: OrderStatus): Promise<boolean> => {
-    console.log(`向Firestore更新订单 ${orderId} 状态为 ${status}`);
+    console.log(`向数据库更新订单 ${orderId} 状态为 ${status}`);
     try {
-      const orderRef = doc(db, "orders", orderId);
-      await updateDoc(orderRef, { status });
+      // 使用适配器系统更新文档
+      const orderRef = db.doc(`orders/${orderId}`);
+      await orderRef.update({ status });
       return true;
     } catch (error) {
-      console.error("向Firestore更新订单状态出错: ", error);
+      console.error("向数据库更新订单状态出错: ", error);
       setTimeout(() => {
       toast({
         title: "订单更新失败",
@@ -231,16 +223,17 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const updateOrderRating = async (orderId: string, rating: number): Promise<boolean> => {
-    console.log(`向Firestore更新订单 ${orderId} 评分为 ${rating}`);
+    console.log(`向数据库更新订单 ${orderId} 评分为 ${rating}`);
     try {
-      const orderRef = doc(db, "orders", orderId);
-      await updateDoc(orderRef, { rating });
+      // 使用适配器系统更新文档
+      const orderRef = db.doc(`orders/${orderId}`);
+      await orderRef.update({ rating });
       setTimeout(() => {
       toast({ title: `已评价 ${rating} 星!`, description: "感谢您的反馈。" });
     },0);
       return true;
     } catch (error) {
-      console.error("向Firestore更新订单评分出错: ", error);
+      console.error("向数据库更新订单评分出错: ", error);
       setTimeout(() => {
       toast({
         title: "评价失败",

@@ -17,7 +17,8 @@ import { toast } from "@/hooks/use-toast";
 import { db } from "@/lib/firebase";
 import type { BedQrCode } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { collection, addDoc, getDocs, serverTimestamp, doc, updateDoc, query, orderBy as firestoreOrderBy, writeBatch } from "firebase/firestore";
+// 所有数据库操作方法现在通过适配器系统提供
+// 无需直接导入 firebase/firestore
 import { QrCode as QrCodeIconLucide, PlusCircle, ListChecks, ArrowLeft, Loader2, Edit, ToggleLeft, ToggleRight, Download, Eye, Layers } from "lucide-react";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
@@ -141,14 +142,17 @@ export default function AdminQrCodesPage() {
 
     try {
       if (editingQrCode) {
-        const qrRef = doc(db, "bed-qrcodes", editingQrCode.id);
-        await updateDoc(qrRef, { ...qrDataPayload, lastUpdatedAt: serverTimestamp() });
+        // 使用适配器系统更新文档
+        const qrRef = db.doc(`bed-qrcodes/${editingQrCode.id}`);
+        await qrRef.update({ ...qrDataPayload, lastUpdatedAt: db.serverTimestamp() });
         toast({ title: "成功", description: "二维码信息已更新。" });
       } else {
-        await addDoc(collection(db, "bed-qrcodes"), {
+        // 使用适配器系统添加文档
+        const qrCodeCollection = db.collection("bed-qrcodes");
+        await qrCodeCollection.add({
           ...qrDataPayload,
           isActive: true,
-          createdAt: serverTimestamp(),
+          createdAt: db.serverTimestamp(),
         });
         toast({ title: "成功", description: "新二维码数据已生成。" });
       }
@@ -166,10 +170,10 @@ export default function AdminQrCodesPage() {
 
   const handleBatchSubmit = async (data: BatchQrCodeFormData) => {
     setIsBatchSubmitting(true);
-    const batch = writeBatch(db);
-    const qrCodesCollectionRef = collection(db, "bed-qrcodes");
+    const qrCodesCollection = db.collection("bed-qrcodes");
 
     try {
+      // 由于模拟环境不支持批量操作，改为逐个添加
       for (let i = 0; i < data.count; i++) {
         const currentNumber = data.startNumber + i;
         const bedId = `${data.prefix}${currentNumber}${data.suffix || ''}`;
@@ -188,7 +192,6 @@ export default function AdminQrCodesPage() {
           details: details,
         });
 
-        const newQrDocRef = doc(qrCodesCollectionRef); // Auto-generate ID
         const qrDataPayload: Omit<BedQrCode, 'id'> = {
           bedId: bedId,
           department: data.department || undefined,
@@ -196,12 +199,12 @@ export default function AdminQrCodesPage() {
           details: details,
           qrCodeValue: qrCodeJsonValue,
           isActive: true,
-          createdAt: serverTimestamp(),
+          createdAt: db.serverTimestamp(),
         };
-        batch.set(newQrDocRef, qrDataPayload);
+        
+        await qrCodesCollection.add(qrDataPayload);
       }
 
-      await batch.commit();
       toast({ title: "成功", description: `已成功批量生成 ${data.count} 个二维码数据。` });
       batchReset({
         prefix: '',
@@ -225,8 +228,9 @@ export default function AdminQrCodesPage() {
 
   const handleToggleActive = async (qr: BedQrCode) => {
     try {
-        const qrRef = doc(db, "bed-qrcodes", qr.id);
-        await updateDoc(qrRef, {isActive: !qr.isActive});
+        // 使用适配器系统更新文档
+        const qrRef = db.doc(`bed-qrcodes/${qr.id}`);
+        await qrRef.update({isActive: !qr.isActive});
         toast({title: "状态已更新", description: `床位 ${qr.bedId} 现已${!qr.isActive ? '激活' : '停用'}。`});
         await fetchQrCodes();
     } catch (error) {

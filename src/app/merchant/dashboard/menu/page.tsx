@@ -6,7 +6,8 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { useAuth } from '@/contexts/auth-context';
 import { db } from '@/lib/firebase';
-import { doc, getDoc, updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore';
+// 所有数据库操作方法现在通过适配器系统提供
+// 无需直接导入 firebase/firestore
 import type { Restaurant, MenuItem } from '@/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -46,8 +47,9 @@ export default function MerchantMenuPage() {
     const restaurantId = currentUser.uid;
 
     try {
-      const restaurantRef = doc(db, "restaurants", restaurantId);
-      const docSnap = await getDoc(restaurantRef);
+      // 使用适配器系统获取餐馆数据
+      const restaurantRef = db.doc(`restaurants/${restaurantId}`);
+      const docSnap = await restaurantRef.get();
       if (docSnap.exists()) {
         const data = docSnap.data() as Restaurant;
         setRestaurant(data);
@@ -80,7 +82,8 @@ export default function MerchantMenuPage() {
       return;
     }
     setIsSubmittingForm(true);
-    const restaurantRef = doc(db, "restaurants", currentUser.uid);
+    // 使用适配器系统获取餐馆引用
+    const restaurantRef = db.doc(`restaurants/${currentUser.uid}`);
 
     try {
       let imageUrlToSave = data.imageUrl;
@@ -100,7 +103,7 @@ export default function MerchantMenuPage() {
             }
             : item
         );
-        await updateDoc(restaurantRef, { menu: updatedMenuItems });
+        await restaurantRef.update({ menu: updatedMenuItems });
         setMenuItems(updatedMenuItems);
         toast({ title: "成功", description: `${data.name} 已更新。` });
       } else {
@@ -114,7 +117,10 @@ export default function MerchantMenuPage() {
           dataAiHint: data.dataAiHint,
           isAvailable: true, 
         };
-        await updateDoc(restaurantRef, { menu: arrayUnion(newItem) });
+        // 模拟环境中的 arrayUnion 操作
+        const currentMenu = restaurant.menu || [];
+        const updatedMenu = [...currentMenu, newItem];
+        await restaurantRef.update({ menu: updatedMenu });
         setMenuItems(prevItems => [...prevItems, newItem]);
         toast({ title: "成功", description: `${newItem.name} 已添加。` });
       }
@@ -131,12 +137,15 @@ export default function MerchantMenuPage() {
   const handleDeleteItem = async (itemId: string, itemName: string) => {
     if (!restaurant || !currentUser?.uid || !window.confirm(`您确定要删除 "${itemName}" 吗?`)) return;
     setIsSubmittingForm(true);
-    const restaurantRef = doc(db, "restaurants", currentUser.uid);
+    // 使用适配器系统获取餐馆引用
+    const restaurantRef = db.doc(`restaurants/${currentUser.uid}`);
     const itemToDelete = menuItems.find(item => item.id === itemId);
     if (!itemToDelete) return;
 
     try {
-      await updateDoc(restaurantRef, { menu: arrayRemove(itemToDelete) });
+      // 模拟环境中的 arrayRemove 操作
+      const updatedMenu = menuItems.filter(item => item.id !== itemId);
+      await restaurantRef.update({ menu: updatedMenu });
       setMenuItems(prevItems => prevItems.filter(item => item.id !== itemId));
       toast({ title: "成功", description: `${itemName} 已删除。` });
     } catch (err) {
@@ -150,13 +159,14 @@ export default function MerchantMenuPage() {
   const handleToggleAvailability = async (itemId: string, currentAvailability: boolean) => {
     if (!restaurant || !currentUser?.uid) return;
     setIsUpdatingAvailability(itemId);
-    const restaurantRef = doc(db, "restaurants", currentUser.uid);
+    // 使用适配器系统获取餐馆引用
+    const restaurantRef = db.doc(`restaurants/${currentUser.uid}`);
     const updatedMenuItems = menuItems.map(item =>
       item.id === itemId ? { ...item, isAvailable: !currentAvailability } : item
     );
 
     try {
-      await updateDoc(restaurantRef, { menu: updatedMenuItems });
+      await restaurantRef.update({ menu: updatedMenuItems });
       setMenuItems(updatedMenuItems);
       toast({ title: "上/下架状态已更新", description: `商品现在 ${!currentAvailability ? '已上架' : '已下架'}。` });
     } catch (err) {

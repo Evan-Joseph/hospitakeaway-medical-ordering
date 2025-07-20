@@ -1,38 +1,39 @@
 {
-  "timestamp": "2025-07-20T13:51:17.656Z",
+  "timestamp": "2025-07-20T14:45:25.182Z",
   "summary": {
-    "totalFiles": 93,
-    "filesWithFirebase": 18,
-    "affectedPercentage": "19.4"
+    "totalFiles": 91,
+    "filesWithFirebase": 19,
+    "affectedPercentage": "20.9"
   },
   "statistics": {
     "byFileType": {
       ".tsx": {
         "count": 13,
         "files": [
-          "src\\app\\admin\\dashboard\\merchants\\page.tsx",
-          "src\\app\\admin\\dashboard\\qrcodes\\page.tsx",
-          "src\\app\\cart\\page.tsx",
-          "src\\app\\checkout\\page.tsx",
-          "src\\app\\favorites\\page.tsx",
-          "src\\app\\merchant\\dashboard\\menu\\page.tsx",
-          "src\\app\\merchant\\dashboard\\promotions\\page.tsx",
-          "src\\app\\merchant\\dashboard\\settings\\page.tsx",
-          "src\\app\\restaurants\\page.tsx",
-          "src\\app\\restaurants\\[restaurantId]\\page.tsx",
-          "src\\contexts\\auth-context.tsx",
-          "src\\contexts\\favorites-context.tsx",
-          "src\\contexts\\order-context.tsx"
+          "src/app/admin/dashboard/merchants/page.tsx",
+          "src/app/admin/dashboard/qrcodes/page.tsx",
+          "src/app/cart/page.tsx",
+          "src/app/checkout/page.tsx",
+          "src/app/favorites/page.tsx",
+          "src/app/merchant/dashboard/menu/page.tsx",
+          "src/app/merchant/dashboard/promotions/page.tsx",
+          "src/app/merchant/dashboard/settings/page.tsx",
+          "src/app/restaurants/[restaurantId]/page.tsx",
+          "src/app/restaurants/page.tsx",
+          "src/contexts/auth-context.tsx",
+          "src/contexts/favorites-context.tsx",
+          "src/contexts/order-context.tsx"
         ]
       },
       ".ts": {
-        "count": 5,
+        "count": 6,
         "files": [
-          "src\\lib\\adapters\\database-adapter.ts",
-          "src\\lib\\adapters\\index.ts",
-          "src\\lib\\adapters\\realtime-adapter.ts",
-          "src\\lib\\adapters\\test-suite.ts",
-          "src\\lib\\database.ts"
+          "src/lib/adapters/database-adapter.ts",
+          "src/lib/adapters/index.ts",
+          "src/lib/adapters/realtime-adapter.ts",
+          "src/lib/adapters/simple-database-adapter.ts",
+          "src/lib/adapters/test-suite.ts",
+          "src/lib/database.ts"
         ]
       }
     },
@@ -40,260 +41,249 @@
       "firebase/firestore": {
         "count": 13,
         "files": [
-          "src\\app\\admin\\dashboard\\merchants\\page.tsx",
-          "src\\app\\admin\\dashboard\\qrcodes\\page.tsx",
-          "src\\app\\cart\\page.tsx",
-          "src\\app\\checkout\\page.tsx",
-          "src\\app\\favorites\\page.tsx",
-          "src\\app\\merchant\\dashboard\\menu\\page.tsx",
-          "src\\app\\merchant\\dashboard\\promotions\\page.tsx",
-          "src\\app\\merchant\\dashboard\\settings\\page.tsx",
-          "src\\app\\restaurants\\page.tsx",
-          "src\\app\\restaurants\\[restaurantId]\\page.tsx",
-          "src\\contexts\\favorites-context.tsx",
-          "src\\contexts\\order-context.tsx",
-          "src\\lib\\database.ts"
+          "src/app/admin/dashboard/merchants/page.tsx",
+          "src/app/admin/dashboard/qrcodes/page.tsx",
+          "src/app/cart/page.tsx",
+          "src/app/checkout/page.tsx",
+          "src/app/favorites/page.tsx",
+          "src/app/merchant/dashboard/menu/page.tsx",
+          "src/app/merchant/dashboard/promotions/page.tsx",
+          "src/app/merchant/dashboard/settings/page.tsx",
+          "src/app/restaurants/[restaurantId]/page.tsx",
+          "src/app/restaurants/page.tsx",
+          "src/contexts/favorites-context.tsx",
+          "src/contexts/order-context.tsx",
+          "src/lib/database.ts"
         ]
       },
       "from.*firebase": {
-        "count": 28,
+        "count": 27,
         "files": [
-          "src\\app\\admin\\dashboard\\merchants\\page.tsx",
-          "src\\app\\admin\\dashboard\\qrcodes\\page.tsx",
-          "src\\app\\cart\\page.tsx",
-          "src\\app\\checkout\\page.tsx",
-          "src\\app\\favorites\\page.tsx",
-          "src\\app\\merchant\\dashboard\\menu\\page.tsx",
-          "src\\app\\merchant\\dashboard\\promotions\\page.tsx",
-          "src\\app\\merchant\\dashboard\\settings\\page.tsx",
-          "src\\app\\restaurants\\page.tsx",
-          "src\\app\\restaurants\\[restaurantId]\\page.tsx",
-          "src\\contexts\\favorites-context.tsx",
-          "src\\contexts\\order-context.tsx",
-          "src\\lib\\database.ts"
+          "src/app/admin/dashboard/merchants/page.tsx",
+          "src/app/admin/dashboard/qrcodes/page.tsx",
+          "src/app/cart/page.tsx",
+          "src/app/checkout/page.tsx",
+          "src/app/favorites/page.tsx",
+          "src/app/merchant/dashboard/menu/page.tsx",
+          "src/app/merchant/dashboard/promotions/page.tsx",
+          "src/app/merchant/dashboard/settings/page.tsx",
+          "src/app/restaurants/[restaurantId]/page.tsx",
+          "src/app/restaurants/page.tsx",
+          "src/contexts/auth-context.tsx",
+          "src/contexts/favorites-context.tsx",
+          "src/contexts/order-context.tsx",
+          "src/lib/database.ts"
         ]
       },
       "import.*firebase": {
-        "count": 26,
+        "count": 27,
         "files": [
-          "src\\app\\admin\\dashboard\\merchants\\page.tsx",
-          "src\\app\\admin\\dashboard\\qrcodes\\page.tsx",
-          "src\\app\\cart\\page.tsx",
-          "src\\app\\checkout\\page.tsx",
-          "src\\app\\favorites\\page.tsx",
-          "src\\app\\merchant\\dashboard\\menu\\page.tsx",
-          "src\\app\\merchant\\dashboard\\promotions\\page.tsx",
-          "src\\app\\merchant\\dashboard\\settings\\page.tsx",
-          "src\\app\\restaurants\\page.tsx",
-          "src\\app\\restaurants\\[restaurantId]\\page.tsx",
-          "src\\contexts\\favorites-context.tsx",
-          "src\\contexts\\order-context.tsx",
-          "src\\lib\\database.ts"
+          "src/app/admin/dashboard/merchants/page.tsx",
+          "src/app/admin/dashboard/qrcodes/page.tsx",
+          "src/app/cart/page.tsx",
+          "src/app/checkout/page.tsx",
+          "src/app/favorites/page.tsx",
+          "src/app/merchant/dashboard/menu/page.tsx",
+          "src/app/merchant/dashboard/promotions/page.tsx",
+          "src/app/merchant/dashboard/settings/page.tsx",
+          "src/app/restaurants/[restaurantId]/page.tsx",
+          "src/app/restaurants/page.tsx",
+          "src/contexts/auth-context.tsx",
+          "src/contexts/favorites-context.tsx",
+          "src/contexts/order-context.tsx",
+          "src/lib/database.ts"
         ]
       },
       "@/lib/firebase": {
-        "count": 12,
+        "count": 13,
         "files": [
-          "src\\app\\admin\\dashboard\\merchants\\page.tsx",
-          "src\\app\\admin\\dashboard\\qrcodes\\page.tsx",
-          "src\\app\\cart\\page.tsx",
-          "src\\app\\checkout\\page.tsx",
-          "src\\app\\favorites\\page.tsx",
-          "src\\app\\merchant\\dashboard\\menu\\page.tsx",
-          "src\\app\\merchant\\dashboard\\promotions\\page.tsx",
-          "src\\app\\merchant\\dashboard\\settings\\page.tsx",
-          "src\\app\\restaurants\\page.tsx",
-          "src\\app\\restaurants\\[restaurantId]\\page.tsx",
-          "src\\contexts\\favorites-context.tsx",
-          "src\\contexts\\order-context.tsx"
+          "src/app/admin/dashboard/merchants/page.tsx",
+          "src/app/admin/dashboard/qrcodes/page.tsx",
+          "src/app/cart/page.tsx",
+          "src/app/checkout/page.tsx",
+          "src/app/favorites/page.tsx",
+          "src/app/merchant/dashboard/menu/page.tsx",
+          "src/app/merchant/dashboard/promotions/page.tsx",
+          "src/app/merchant/dashboard/settings/page.tsx",
+          "src/app/restaurants/[restaurantId]/page.tsx",
+          "src/app/restaurants/page.tsx",
+          "src/contexts/auth-context.tsx",
+          "src/contexts/favorites-context.tsx",
+          "src/contexts/order-context.tsx"
         ]
       },
       "collection\\(": {
         "count": 23,
         "files": [
-          "src\\app\\admin\\dashboard\\merchants\\page.tsx",
-          "src\\app\\admin\\dashboard\\qrcodes\\page.tsx",
-          "src\\app\\restaurants\\page.tsx",
-          "src\\contexts\\favorites-context.tsx",
-          "src\\contexts\\order-context.tsx",
-          "src\\lib\\adapters\\database-adapter.ts",
-          "src\\lib\\adapters\\realtime-adapter.ts",
-          "src\\lib\\adapters\\test-suite.ts"
+          "src/app/admin/dashboard/merchants/page.tsx",
+          "src/app/admin/dashboard/qrcodes/page.tsx",
+          "src/app/restaurants/page.tsx",
+          "src/contexts/favorites-context.tsx",
+          "src/contexts/order-context.tsx",
+          "src/lib/adapters/database-adapter.ts",
+          "src/lib/adapters/realtime-adapter.ts",
+          "src/lib/adapters/simple-database-adapter.ts",
+          "src/lib/adapters/test-suite.ts"
         ]
       },
       "doc\\(": {
-        "count": 49,
+        "count": 46,
         "files": [
-          "src\\app\\admin\\dashboard\\merchants\\page.tsx",
-          "src\\app\\admin\\dashboard\\qrcodes\\page.tsx",
-          "src\\app\\cart\\page.tsx",
-          "src\\app\\checkout\\page.tsx",
-          "src\\app\\favorites\\page.tsx",
-          "src\\app\\merchant\\dashboard\\menu\\page.tsx",
-          "src\\app\\merchant\\dashboard\\promotions\\page.tsx",
-          "src\\app\\merchant\\dashboard\\settings\\page.tsx",
-          "src\\app\\restaurants\\[restaurantId]\\page.tsx",
-          "src\\contexts\\auth-context.tsx",
-          "src\\contexts\\favorites-context.tsx",
-          "src\\contexts\\order-context.tsx",
-          "src\\lib\\adapters\\database-adapter.ts",
-          "src\\lib\\adapters\\test-suite.ts"
+          "src/app/admin/dashboard/merchants/page.tsx",
+          "src/app/admin/dashboard/qrcodes/page.tsx",
+          "src/app/cart/page.tsx",
+          "src/app/checkout/page.tsx",
+          "src/app/favorites/page.tsx",
+          "src/app/merchant/dashboard/menu/page.tsx",
+          "src/app/merchant/dashboard/promotions/page.tsx",
+          "src/app/merchant/dashboard/settings/page.tsx",
+          "src/app/restaurants/[restaurantId]/page.tsx",
+          "src/contexts/auth-context.tsx",
+          "src/contexts/favorites-context.tsx",
+          "src/contexts/order-context.tsx",
+          "src/lib/adapters/database-adapter.ts",
+          "src/lib/adapters/simple-database-adapter.ts",
+          "src/lib/adapters/test-suite.ts"
         ]
       },
       "getDocs\\(": {
-        "count": 5,
+        "count": 3,
         "files": [
-          "src\\app\\admin\\dashboard\\merchants\\page.tsx",
-          "src\\app\\admin\\dashboard\\qrcodes\\page.tsx",
-          "src\\app\\restaurants\\page.tsx",
-          "src\\contexts\\favorites-context.tsx",
-          "src\\contexts\\order-context.tsx"
+          "src/app/admin/dashboard/merchants/page.tsx",
+          "src/app/admin/dashboard/qrcodes/page.tsx",
+          "src/app/restaurants/page.tsx"
         ]
       },
       "updateDoc\\(": {
-        "count": 11,
+        "count": 9,
         "files": [
-          "src\\app\\admin\\dashboard\\merchants\\page.tsx",
-          "src\\app\\admin\\dashboard\\qrcodes\\page.tsx",
-          "src\\app\\merchant\\dashboard\\menu\\page.tsx",
-          "src\\app\\merchant\\dashboard\\promotions\\page.tsx",
-          "src\\app\\merchant\\dashboard\\settings\\page.tsx",
-          "src\\contexts\\order-context.tsx"
+          "src/app/admin/dashboard/merchants/page.tsx",
+          "src/app/admin/dashboard/qrcodes/page.tsx",
+          "src/app/merchant/dashboard/menu/page.tsx",
+          "src/app/merchant/dashboard/promotions/page.tsx",
+          "src/app/merchant/dashboard/settings/page.tsx"
         ]
       },
       "query\\(": {
-        "count": 16,
+        "count": 22,
         "files": [
-          "src\\app\\admin\\dashboard\\merchants\\page.tsx",
-          "src\\app\\admin\\dashboard\\qrcodes\\page.tsx",
-          "src\\app\\restaurants\\page.tsx",
-          "src\\contexts\\favorites-context.tsx",
-          "src\\contexts\\order-context.tsx",
-          "src\\lib\\adapters\\database-adapter.ts"
+          "src/app/admin/dashboard/merchants/page.tsx",
+          "src/app/admin/dashboard/qrcodes/page.tsx",
+          "src/app/restaurants/page.tsx",
+          "src/lib/adapters/database-adapter.ts",
+          "src/lib/adapters/simple-database-adapter.ts"
         ]
       },
       "orderBy\\(": {
-        "count": 10,
+        "count": 14,
         "files": [
-          "src\\app\\admin\\dashboard\\merchants\\page.tsx",
-          "src\\app\\admin\\dashboard\\qrcodes\\page.tsx",
-          "src\\contexts\\favorites-context.tsx",
-          "src\\contexts\\order-context.tsx",
-          "src\\lib\\adapters\\database-adapter.ts",
-          "src\\lib\\adapters\\test-suite.ts"
+          "src/app/admin/dashboard/merchants/page.tsx",
+          "src/app/admin/dashboard/qrcodes/page.tsx",
+          "src/contexts/favorites-context.tsx",
+          "src/contexts/order-context.tsx",
+          "src/lib/adapters/database-adapter.ts",
+          "src/lib/adapters/simple-database-adapter.ts",
+          "src/lib/adapters/test-suite.ts"
         ]
       },
       "addDoc\\(": {
-        "count": 2,
+        "count": 1,
         "files": [
-          "src\\app\\admin\\dashboard\\qrcodes\\page.tsx",
-          "src\\contexts\\order-context.tsx"
+          "src/app/admin/dashboard/qrcodes/page.tsx"
         ]
       },
       "serverTimestamp\\(": {
-        "count": 4,
+        "count": 6,
         "files": [
-          "src\\app\\admin\\dashboard\\qrcodes\\page.tsx",
-          "src\\contexts\\order-context.tsx"
+          "src/app/admin/dashboard/qrcodes/page.tsx",
+          "src/contexts/order-context.tsx",
+          "src/lib/adapters/database-adapter.ts",
+          "src/lib/adapters/simple-database-adapter.ts"
         ]
       },
       "writeBatch\\(": {
         "count": 1,
         "files": [
-          "src\\app\\admin\\dashboard\\qrcodes\\page.tsx"
+          "src/app/admin/dashboard/qrcodes/page.tsx"
         ]
       },
       "getDoc\\(": {
-        "count": 8,
+        "count": 7,
         "files": [
-          "src\\app\\cart\\page.tsx",
-          "src\\app\\checkout\\page.tsx",
-          "src\\app\\favorites\\page.tsx",
-          "src\\app\\merchant\\dashboard\\menu\\page.tsx",
-          "src\\app\\merchant\\dashboard\\promotions\\page.tsx",
-          "src\\app\\merchant\\dashboard\\settings\\page.tsx",
-          "src\\app\\restaurants\\[restaurantId]\\page.tsx",
-          "src\\contexts\\order-context.tsx"
+          "src/app/cart/page.tsx",
+          "src/app/checkout/page.tsx",
+          "src/app/favorites/page.tsx",
+          "src/app/merchant/dashboard/menu/page.tsx",
+          "src/app/merchant/dashboard/promotions/page.tsx",
+          "src/app/merchant/dashboard/settings/page.tsx",
+          "src/app/restaurants/[restaurantId]/page.tsx"
         ]
       },
       "arrayUnion\\(": {
         "count": 1,
         "files": [
-          "src\\app\\merchant\\dashboard\\menu\\page.tsx"
+          "src/app/merchant/dashboard/menu/page.tsx"
         ]
       },
       "arrayRemove\\(": {
         "count": 1,
         "files": [
-          "src\\app\\merchant\\dashboard\\menu\\page.tsx"
+          "src/app/merchant/dashboard/menu/page.tsx"
         ]
       },
       "where\\(": {
-        "count": 6,
+        "count": 10,
         "files": [
-          "src\\app\\restaurants\\page.tsx",
-          "src\\lib\\adapters\\database-adapter.ts",
-          "src\\lib\\adapters\\test-suite.ts"
-        ]
-      },
-      "setDoc\\(": {
-        "count": 2,
-        "files": [
-          "src\\contexts\\auth-context.tsx",
-          "src\\contexts\\favorites-context.tsx"
-        ]
-      },
-      "deleteDoc\\(": {
-        "count": 1,
-        "files": [
-          "src\\contexts\\favorites-context.tsx"
-        ]
-      },
-      "Timestamp\\.": {
-        "count": 3,
-        "files": [
-          "src\\contexts\\favorites-context.tsx",
-          "src\\contexts\\order-context.tsx"
+          "src/app/restaurants/page.tsx",
+          "src/lib/adapters/database-adapter.ts",
+          "src/lib/adapters/simple-database-adapter.ts",
+          "src/lib/adapters/test-suite.ts"
         ]
       },
       "onSnapshot\\(": {
-        "count": 10,
+        "count": 13,
         "files": [
-          "src\\contexts\\order-context.tsx",
-          "src\\lib\\adapters\\database-adapter.ts",
-          "src\\lib\\adapters\\index.ts",
-          "src\\lib\\adapters\\realtime-adapter.ts",
-          "src\\lib\\adapters\\test-suite.ts"
+          "src/contexts/order-context.tsx",
+          "src/lib/adapters/database-adapter.ts",
+          "src/lib/adapters/index.ts",
+          "src/lib/adapters/realtime-adapter.ts",
+          "src/lib/adapters/simple-database-adapter.ts",
+          "src/lib/adapters/test-suite.ts"
+        ]
+      },
+      "Timestamp\\.": {
+        "count": 2,
+        "files": [
+          "src/contexts/order-context.tsx"
         ]
       },
       "firebase/auth": {
         "count": 1,
         "files": [
-          "src\\lib\\database.ts"
+          "src/lib/database.ts"
         ]
       },
       "firebase/storage": {
         "count": 1,
         "files": [
-          "src\\lib\\database.ts"
+          "src/lib/database.ts"
         ]
       },
       "firebase/app": {
         "count": 1,
         "files": [
-          "src\\lib\\database.ts"
+          "src/lib/database.ts"
         ]
       }
     },
     "mostAffectedFiles": [
       {
-        "file": "src\\lib\\adapters\\database-adapter.ts",
+        "file": "src/lib/adapters/database-adapter.ts",
         "patterns": [
           {
             "pattern": "collection\\(",
-            "matches": 4,
+            "matches": 2,
             "examples": [
-              "collection(",
               "collection(",
               "collection("
             ]
@@ -314,6 +304,13 @@
               "onSnapshot(",
               "onSnapshot(",
               "onSnapshot("
+            ]
+          },
+          {
+            "pattern": "serverTimestamp\\(",
+            "matches": 1,
+            "examples": [
+              "serverTimestamp("
             ]
           },
           {
@@ -346,232 +343,170 @@
         ],
         "lines": [
           {
-            "lineNumber": 205,
+            "lineNumber": 208,
             "content": "where(field: string, operator: string, value: any): Query {",
             "pattern": "where\\("
           },
           {
-            "lineNumber": 237,
+            "lineNumber": 240,
             "content": "return new Query(this.collection, newFilter, this.sortOptions, this.limitCount, this.offsetCount);",
             "pattern": "query\\("
           },
           {
-            "lineNumber": 240,
+            "lineNumber": 243,
             "content": "orderBy(field: string, direction: 'asc' | 'desc' = 'asc'): Query {",
             "pattern": "orderBy\\("
           },
           {
-            "lineNumber": 245,
+            "lineNumber": 248,
             "content": "return new Query(this.collection, this.filter, newSortOptions, this.limitCount, this.offsetCount);",
             "pattern": "query\\("
           },
           {
-            "lineNumber": 249,
+            "lineNumber": 252,
             "content": "return new Query(this.collection, this.filter, this.sortOptions, limit, this.offsetCount);",
             "pattern": "query\\("
           },
           {
-            "lineNumber": 253,
+            "lineNumber": 256,
             "content": "return new Query(this.collection, this.filter, this.sortOptions, this.limitCount, offset);",
             "pattern": "query\\("
           },
           {
-            "lineNumber": 285,
+            "lineNumber": 288,
             "content": "onSnapshot(",
             "pattern": "onSnapshot\\("
           },
           {
-            "lineNumber": 330,
+            "lineNumber": 333,
             "content": "doc(docId?: string): DocumentReference {",
             "pattern": "doc\\("
           },
           {
-            "lineNumber": 358,
+            "lineNumber": 382,
             "content": "where(field: string, operator: string, value: any): Query {",
             "pattern": "where\\("
           },
           {
-            "lineNumber": 359,
+            "lineNumber": 383,
             "content": "return new Query(this.collection).where(field, operator, value);",
             "pattern": "query\\("
           },
           {
-            "lineNumber": 359,
+            "lineNumber": 383,
             "content": "return new Query(this.collection).where(field, operator, value);",
             "pattern": "where\\("
           },
           {
-            "lineNumber": 362,
+            "lineNumber": 386,
             "content": "orderBy(field: string, direction: 'asc' | 'desc' = 'asc'): Query {",
             "pattern": "orderBy\\("
           },
           {
-            "lineNumber": 363,
+            "lineNumber": 387,
             "content": "return new Query(this.collection).orderBy(field, direction);",
             "pattern": "query\\("
           },
           {
-            "lineNumber": 363,
+            "lineNumber": 387,
             "content": "return new Query(this.collection).orderBy(field, direction);",
             "pattern": "orderBy\\("
           },
           {
-            "lineNumber": 367,
+            "lineNumber": 391,
             "content": "return new Query(this.collection).limit(limit);",
             "pattern": "query\\("
           },
           {
-            "lineNumber": 371,
+            "lineNumber": 395,
             "content": "return new Query(this.collection).get();",
             "pattern": "query\\("
           },
           {
-            "lineNumber": 374,
+            "lineNumber": 398,
             "content": "onSnapshot(",
             "pattern": "onSnapshot\\("
           },
           {
-            "lineNumber": 378,
+            "lineNumber": 402,
             "content": "return new Query(this.collection).onSnapshot(onNext, onError);",
             "pattern": "onSnapshot\\("
           },
           {
-            "lineNumber": 378,
+            "lineNumber": 402,
             "content": "return new Query(this.collection).onSnapshot(onNext, onError);",
             "pattern": "query\\("
           },
           {
-            "lineNumber": 412,
+            "lineNumber": 428,
             "content": "collection(name: string): CollectionReference {",
             "pattern": "collection\\("
           },
           {
-            "lineNumber": 413,
-            "content": "return new CollectionReference(this.db.collection(name));",
-            "pattern": "collection\\("
-          },
-          {
-            "lineNumber": 416,
+            "lineNumber": 432,
             "content": "doc(path: string): DocumentReference {",
             "pattern": "doc\\("
           },
           {
-            "lineNumber": 423,
-            "content": "return new DocumentReference(this.db.collection(collectionName), docId);",
-            "pattern": "collection\\("
+            "lineNumber": 442,
+            "content": "serverTimestamp(): Date {",
+            "pattern": "serverTimestamp\\("
           },
           {
-            "lineNumber": 429,
+            "lineNumber": 449,
             "content": "return db.collection(name);",
             "pattern": "collection\\("
           },
           {
-            "lineNumber": 433,
+            "lineNumber": 453,
             "content": "return db.doc(path);",
             "pattern": "doc\\("
           },
           {
-            "lineNumber": 440,
+            "lineNumber": 460,
             "content": "let currentQuery = new Query((collection as any).collection);",
             "pattern": "query\\("
           },
           {
-            "lineNumber": 444,
+            "lineNumber": 464,
             "content": "currentQuery = currentQuery.where(constraint.field, constraint.operator, constraint.value);",
             "pattern": "where\\("
           },
           {
-            "lineNumber": 446,
+            "lineNumber": 466,
             "content": "currentQuery = currentQuery.orderBy(constraint.field, constraint.direction);",
             "pattern": "orderBy\\("
           }
         ],
-        "totalLines": 507,
-        "firebaseLineCount": 28
+        "totalLines": 527,
+        "firebaseLineCount": 27
       },
       {
-        "file": "src\\contexts\\order-context.tsx",
+        "file": "src/lib/adapters/simple-database-adapter.ts",
         "patterns": [
           {
-            "pattern": "firebase/firestore",
-            "matches": 1,
-            "examples": [
-              "firebase/firestore"
-            ]
-          },
-          {
-            "pattern": "from.*firebase",
+            "pattern": "collection\\(",
             "matches": 2,
             "examples": [
-              "from '@/lib/firebase",
-              "from 'firebase"
-            ]
-          },
-          {
-            "pattern": "import.*firebase",
-            "matches": 1,
-            "examples": [
-              "import { db } from '@/lib/firebase"
-            ]
-          },
-          {
-            "pattern": "@/lib/firebase",
-            "matches": 1,
-            "examples": [
-              "@/lib/firebase"
-            ]
-          },
-          {
-            "pattern": "collection\\(",
-            "matches": 3,
-            "examples": [
-              "collection(",
               "collection(",
               "collection("
             ]
           },
           {
             "pattern": "doc\\(",
-            "matches": 6,
+            "matches": 3,
             "examples": [
-              "Doc(",
-              "Doc(",
+              "doc(",
+              "doc(",
               "doc("
             ]
           },
           {
-            "pattern": "getDoc\\(",
-            "matches": 1,
-            "examples": [
-              "getDoc("
-            ]
-          },
-          {
-            "pattern": "getDocs\\(",
-            "matches": 1,
-            "examples": [
-              "getDocs("
-            ]
-          },
-          {
-            "pattern": "addDoc\\(",
-            "matches": 1,
-            "examples": [
-              "addDoc("
-            ]
-          },
-          {
-            "pattern": "updateDoc\\(",
-            "matches": 2,
-            "examples": [
-              "updateDoc(",
-              "updateDoc("
-            ]
-          },
-          {
             "pattern": "onSnapshot\\(",
-            "matches": 1,
+            "matches": 3,
             "examples": [
+              "onSnapshot(",
+              "onSnapshot(",
               "onSnapshot("
             ]
           },
@@ -583,172 +518,170 @@
             ]
           },
           {
-            "pattern": "Timestamp\\.",
-            "matches": 2,
-            "examples": [
-              "Timestamp.",
-              "Timestamp."
-            ]
-          },
-          {
             "pattern": "query\\(",
-            "matches": 2,
+            "matches": 9,
             "examples": [
-              "query(",
-              "query("
+              "Query(",
+              "Query(",
+              "Query("
             ]
           },
           {
             "pattern": "orderBy\\(",
-            "matches": 2,
+            "matches": 4,
             "examples": [
               "orderBy(",
+              "orderBy(",
               "orderBy("
+            ]
+          },
+          {
+            "pattern": "where\\(",
+            "matches": 4,
+            "examples": [
+              "where(",
+              "where(",
+              "where("
             ]
           }
         ],
         "lines": [
           {
-            "lineNumber": 7,
-            "content": "import { db } from '@/lib/firebase';",
-            "pattern": "from.*firebase"
+            "lineNumber": 105,
+            "content": "where(field: string, operator: string, value: any): Query {",
+            "pattern": "where\\("
           },
           {
-            "lineNumber": 7,
-            "content": "import { db } from '@/lib/firebase';",
-            "pattern": "import.*firebase"
-          },
-          {
-            "lineNumber": 7,
-            "content": "import { db } from '@/lib/firebase';",
-            "pattern": "@/lib/firebase"
-          },
-          {
-            "lineNumber": 21,
-            "content": "} from 'firebase/firestore';",
-            "pattern": "firebase/firestore"
-          },
-          {
-            "lineNumber": 21,
-            "content": "} from 'firebase/firestore';",
-            "pattern": "from.*firebase"
-          },
-          {
-            "lineNumber": 58,
-            "content": "const ordersCollectionRef = collection(db, \"orders\");",
-            "pattern": "collection\\("
-          },
-          {
-            "lineNumber": 59,
-            "content": "const q = query(ordersCollectionRef, orderBy(\"orderDate\", \"desc\"));",
+            "lineNumber": 107,
+            "content": "return new Query(this.collectionName, { ...this.filters, [field]: value }, this.sortOptions, this.limitCount);",
             "pattern": "query\\("
           },
           {
-            "lineNumber": 59,
-            "content": "const q = query(ordersCollectionRef, orderBy(\"orderDate\", \"desc\"));",
+            "lineNumber": 110,
+            "content": "orderBy(field: string, direction: 'asc' | 'desc' = 'asc'): Query {",
             "pattern": "orderBy\\("
           },
           {
-            "lineNumber": 60,
-            "content": "const querySnapshot = await getDocs(q);",
-            "pattern": "getDocs\\("
-          },
-          {
-            "lineNumber": 98,
-            "content": "const ordersCollectionRef = collection(db, \"orders\");",
-            "pattern": "collection\\("
-          },
-          {
-            "lineNumber": 99,
-            "content": "const q = query(ordersCollectionRef, orderBy(\"orderDate\", \"desc\"));",
+            "lineNumber": 112,
+            "content": "return new Query(this.collectionName, this.filters, { ...this.sortOptions, [field]: direction }, this.limitCount);",
             "pattern": "query\\("
           },
           {
-            "lineNumber": 99,
-            "content": "const q = query(ordersCollectionRef, orderBy(\"orderDate\", \"desc\"));",
-            "pattern": "orderBy\\("
+            "lineNumber": 117,
+            "content": "return new Query(this.collectionName, this.filters, this.sortOptions, limit);",
+            "pattern": "query\\("
           },
           {
-            "lineNumber": 101,
-            "content": "const unsubscribe = onSnapshot(q, (querySnapshot) => {",
+            "lineNumber": 125,
+            "content": "onSnapshot(",
             "pattern": "onSnapshot\\("
           },
           {
-            "lineNumber": 146,
-            "content": "const ordersCollectionRef = collection(db, \"orders\");",
-            "pattern": "collection\\("
+            "lineNumber": 147,
+            "content": "doc(docId?: string): DocumentReference {",
+            "pattern": "doc\\("
           },
           {
-            "lineNumber": 159,
-            "content": "orderDate: serverTimestamp(),",
-            "pattern": "serverTimestamp\\("
+            "lineNumber": 162,
+            "content": "where(field: string, operator: string, value: any): Query {",
+            "pattern": "where\\("
           },
           {
-            "lineNumber": 164,
-            "content": "docDataWithTimestamp.appliedPromotion = orderData.appliedPromotion;",
-            "pattern": "Timestamp\\."
+            "lineNumber": 163,
+            "content": "return new Query(this.collectionName).where(field, operator, value);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 163,
+            "content": "return new Query(this.collectionName).where(field, operator, value);",
+            "pattern": "where\\("
+          },
+          {
+            "lineNumber": 166,
+            "content": "orderBy(field: string, direction: 'asc' | 'desc' = 'asc'): Query {",
+            "pattern": "orderBy\\("
           },
           {
             "lineNumber": 167,
-            "content": "docDataWithTimestamp.discountAmount = orderData.discountAmount;",
-            "pattern": "Timestamp\\."
+            "content": "return new Query(this.collectionName).orderBy(field, direction);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 167,
+            "content": "return new Query(this.collectionName).orderBy(field, direction);",
+            "pattern": "orderBy\\("
           },
           {
             "lineNumber": 171,
-            "content": "const docRef = await addDoc(ordersCollectionRef, docDataWithTimestamp);",
+            "content": "return new Query(this.collectionName).limit(limit);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 175,
+            "content": "return new Query(this.collectionName).get();",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 178,
+            "content": "onSnapshot(",
+            "pattern": "onSnapshot\\("
+          },
+          {
+            "lineNumber": 182,
+            "content": "return new Query(this.collectionName).onSnapshot(onNext, onError);",
+            "pattern": "onSnapshot\\("
+          },
+          {
+            "lineNumber": 182,
+            "content": "return new Query(this.collectionName).onSnapshot(onNext, onError);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 200,
+            "content": "collection(name: string): CollectionReference {",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 204,
+            "content": "doc(path: string): DocumentReference {",
             "pattern": "doc\\("
           },
           {
-            "lineNumber": 171,
-            "content": "const docRef = await addDoc(ordersCollectionRef, docDataWithTimestamp);",
-            "pattern": "addDoc\\("
+            "lineNumber": 214,
+            "content": "serverTimestamp(): Date {",
+            "pattern": "serverTimestamp\\("
           },
           {
-            "lineNumber": 172,
-            "content": "const newDocSnap = await getDoc(docRef);",
+            "lineNumber": 221,
+            "content": "return db.collection(name);",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 225,
+            "content": "return db.doc(path);",
             "pattern": "doc\\("
           },
           {
-            "lineNumber": 172,
-            "content": "const newDocSnap = await getDoc(docRef);",
-            "pattern": "getDoc\\("
-          },
-          {
-            "lineNumber": 217,
-            "content": "const orderRef = doc(db, \"orders\", orderId);",
-            "pattern": "doc\\("
-          },
-          {
-            "lineNumber": 218,
-            "content": "await updateDoc(orderRef, { status });",
-            "pattern": "doc\\("
-          },
-          {
-            "lineNumber": 218,
-            "content": "await updateDoc(orderRef, { status });",
-            "pattern": "updateDoc\\("
+            "lineNumber": 232,
+            "content": "let currentQuery = new Query((collection as any).collectionName);",
+            "pattern": "query\\("
           },
           {
             "lineNumber": 236,
-            "content": "const orderRef = doc(db, \"orders\", orderId);",
-            "pattern": "doc\\("
+            "content": "currentQuery = currentQuery.where(constraint.field, constraint.operator, constraint.value);",
+            "pattern": "where\\("
           },
           {
-            "lineNumber": 237,
-            "content": "await updateDoc(orderRef, { rating });",
-            "pattern": "doc\\("
-          },
-          {
-            "lineNumber": 237,
-            "content": "await updateDoc(orderRef, { rating });",
-            "pattern": "updateDoc\\("
+            "lineNumber": 238,
+            "content": "currentQuery = currentQuery.orderBy(constraint.field, constraint.direction);",
+            "pattern": "orderBy\\("
           }
         ],
-        "totalLines": 273,
-        "firebaseLineCount": 27
+        "totalLines": 289,
+        "firebaseLineCount": 26
       },
       {
-        "file": "src\\app\\admin\\dashboard\\qrcodes\\page.tsx",
+        "file": "src/app/admin/dashboard/qrcodes/page.tsx",
         "patterns": [
           {
             "pattern": "firebase/firestore",
@@ -982,7 +915,7 @@
         "firebaseLineCount": 25
       },
       {
-        "file": "src\\app\\merchant\\dashboard\\menu\\page.tsx",
+        "file": "src/app/merchant/dashboard/menu/page.tsx",
         "patterns": [
           {
             "pattern": "firebase/firestore",
@@ -1170,7 +1103,7 @@
         "firebaseLineCount": 22
       },
       {
-        "file": "src\\contexts\\favorites-context.tsx",
+        "file": "src/contexts/order-context.tsx",
         "patterns": [
           {
             "pattern": "firebase/firestore",
@@ -1181,10 +1114,9 @@
           },
           {
             "pattern": "from.*firebase",
-            "matches": 2,
+            "matches": 1,
             "examples": [
-              "from '@/lib/firebase",
-              "from 'firebase"
+              "from '@/lib/firebase"
             ]
           },
           {
@@ -1203,150 +1135,134 @@
           },
           {
             "pattern": "collection\\(",
-            "matches": 1,
+            "matches": 3,
             "examples": [
+              "collection(",
+              "collection(",
               "collection("
             ]
           },
           {
             "pattern": "doc\\(",
-            "matches": 4,
+            "matches": 2,
             "examples": [
               "doc(",
-              "Doc(",
               "doc("
             ]
           },
           {
-            "pattern": "getDocs\\(",
+            "pattern": "onSnapshot\\(",
             "matches": 1,
             "examples": [
-              "getDocs("
+              "onSnapshot("
             ]
           },
           {
-            "pattern": "deleteDoc\\(",
+            "pattern": "serverTimestamp\\(",
             "matches": 1,
             "examples": [
-              "deleteDoc("
-            ]
-          },
-          {
-            "pattern": "setDoc\\(",
-            "matches": 1,
-            "examples": [
-              "setDoc("
+              "serverTimestamp("
             ]
           },
           {
             "pattern": "Timestamp\\.",
-            "matches": 1,
+            "matches": 2,
             "examples": [
+              "Timestamp.",
               "Timestamp."
             ]
           },
           {
-            "pattern": "query\\(",
-            "matches": 1,
-            "examples": [
-              "query("
-            ]
-          },
-          {
             "pattern": "orderBy\\(",
-            "matches": 1,
+            "matches": 2,
             "examples": [
+              "orderBy(",
               "orderBy("
             ]
           }
         ],
         "lines": [
           {
-            "lineNumber": 8,
+            "lineNumber": 7,
             "content": "import { db } from '@/lib/firebase';",
             "pattern": "from.*firebase"
           },
           {
-            "lineNumber": 8,
+            "lineNumber": 7,
             "content": "import { db } from '@/lib/firebase';",
             "pattern": "import.*firebase"
           },
           {
-            "lineNumber": 8,
+            "lineNumber": 7,
             "content": "import { db } from '@/lib/firebase';",
             "pattern": "@/lib/firebase"
           },
           {
-            "lineNumber": 18,
-            "content": "} from 'firebase/firestore';",
+            "lineNumber": 9,
+            "content": "// 无需直接导入 firebase/firestore",
             "pattern": "firebase/firestore"
           },
           {
-            "lineNumber": 18,
-            "content": "} from 'firebase/firestore';",
-            "pattern": "from.*firebase"
-          },
-          {
-            "lineNumber": 42,
-            "content": "const favoritesCollectionRef = collection(db, FAVORITES_COLLECTION_NAME);",
+            "lineNumber": 47,
+            "content": "const ordersCollectionRef = db.collection(\"orders\");",
             "pattern": "collection\\("
           },
           {
-            "lineNumber": 43,
-            "content": "const q = query(favoritesCollectionRef, orderBy(\"addedAt\", \"desc\"));",
-            "pattern": "query\\("
-          },
-          {
-            "lineNumber": 43,
-            "content": "const q = query(favoritesCollectionRef, orderBy(\"addedAt\", \"desc\"));",
+            "lineNumber": 48,
+            "content": "const q = ordersCollectionRef.orderBy(\"orderDate\", \"desc\");",
             "pattern": "orderBy\\("
           },
           {
-            "lineNumber": 44,
-            "content": "const querySnapshot = await getDocs(q);",
-            "pattern": "getDocs\\("
+            "lineNumber": 88,
+            "content": "const ordersCollectionRef = db.collection(\"orders\");",
+            "pattern": "collection\\("
           },
           {
-            "lineNumber": 76,
-            "content": "const favoriteDocRef = doc(db, FAVORITES_COLLECTION_NAME, favoriteId);",
-            "pattern": "doc\\("
+            "lineNumber": 89,
+            "content": "const q = ordersCollectionRef.orderBy(\"orderDate\", \"desc\");",
+            "pattern": "orderBy\\("
           },
           {
-            "lineNumber": 81,
-            "content": "addedAt: Timestamp.now(),",
+            "lineNumber": 91,
+            "content": "const unsubscribe = q.onSnapshot((querySnapshot) => {",
+            "pattern": "onSnapshot\\("
+          },
+          {
+            "lineNumber": 136,
+            "content": "const ordersCollectionRef = db.collection(\"orders\");",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 149,
+            "content": "orderDate: db.serverTimestamp ? db.serverTimestamp() : new Date(),",
+            "pattern": "serverTimestamp\\("
+          },
+          {
+            "lineNumber": 154,
+            "content": "docDataWithTimestamp.appliedPromotion = orderData.appliedPromotion;",
             "pattern": "Timestamp\\."
           },
           {
-            "lineNumber": 83,
-            "content": "await setDoc(favoriteDocRef, newFavorite);",
+            "lineNumber": 157,
+            "content": "docDataWithTimestamp.discountAmount = orderData.discountAmount;",
+            "pattern": "Timestamp\\."
+          },
+          {
+            "lineNumber": 209,
+            "content": "const orderRef = db.doc(`orders/${orderId}`);",
             "pattern": "doc\\("
           },
           {
-            "lineNumber": 83,
-            "content": "await setDoc(favoriteDocRef, newFavorite);",
-            "pattern": "setDoc\\("
-          },
-          {
-            "lineNumber": 114,
-            "content": "const favoriteDocRef = doc(db, FAVORITES_COLLECTION_NAME, favoriteId);",
+            "lineNumber": 229,
+            "content": "const orderRef = db.doc(`orders/${orderId}`);",
             "pattern": "doc\\("
-          },
-          {
-            "lineNumber": 115,
-            "content": "await deleteDoc(favoriteDocRef);",
-            "pattern": "doc\\("
-          },
-          {
-            "lineNumber": 115,
-            "content": "await deleteDoc(favoriteDocRef);",
-            "pattern": "deleteDoc\\("
           }
         ],
-        "totalLines": 173,
-        "firebaseLineCount": 16
+        "totalLines": 266,
+        "firebaseLineCount": 15
       },
       {
-        "file": "src\\app\\admin\\dashboard\\merchants\\page.tsx",
+        "file": "src/app/admin/dashboard/merchants/page.tsx",
         "patterns": [
           {
             "pattern": "firebase/firestore",
@@ -1493,7 +1409,7 @@
         "firebaseLineCount": 13
       },
       {
-        "file": "src\\app\\merchant\\dashboard\\promotions\\page.tsx",
+        "file": "src/app/merchant/dashboard/promotions/page.tsx",
         "patterns": [
           {
             "pattern": "firebase/firestore",
@@ -1615,7 +1531,7 @@
         "firebaseLineCount": 12
       },
       {
-        "file": "src\\app\\merchant\\dashboard\\settings\\page.tsx",
+        "file": "src/app/merchant/dashboard/settings/page.tsx",
         "patterns": [
           {
             "pattern": "firebase/firestore",
@@ -1737,7 +1653,7 @@
         "firebaseLineCount": 12
       },
       {
-        "file": "src\\lib\\adapters\\test-suite.ts",
+        "file": "src/lib/adapters/test-suite.ts",
         "patterns": [
           {
             "pattern": "collection\\(",
@@ -1844,7 +1760,7 @@
         "firebaseLineCount": 12
       },
       {
-        "file": "src\\lib\\database.ts",
+        "file": "src/lib/database.ts",
         "patterns": [
           {
             "pattern": "firebase/firestore",
@@ -1961,7 +1877,644 @@
     ],
     "criticalFiles": [
       {
-        "file": "src\\contexts\\order-context.tsx",
+        "file": "src/lib/adapters/database-adapter.ts",
+        "patterns": [
+          {
+            "pattern": "collection\\(",
+            "matches": 2,
+            "examples": [
+              "collection(",
+              "collection("
+            ]
+          },
+          {
+            "pattern": "doc\\(",
+            "matches": 3,
+            "examples": [
+              "doc(",
+              "doc(",
+              "doc("
+            ]
+          },
+          {
+            "pattern": "onSnapshot\\(",
+            "matches": 3,
+            "examples": [
+              "onSnapshot(",
+              "onSnapshot(",
+              "onSnapshot("
+            ]
+          },
+          {
+            "pattern": "serverTimestamp\\(",
+            "matches": 1,
+            "examples": [
+              "serverTimestamp("
+            ]
+          },
+          {
+            "pattern": "query\\(",
+            "matches": 10,
+            "examples": [
+              "Query(",
+              "Query(",
+              "Query("
+            ]
+          },
+          {
+            "pattern": "orderBy\\(",
+            "matches": 4,
+            "examples": [
+              "orderBy(",
+              "orderBy(",
+              "orderBy("
+            ]
+          },
+          {
+            "pattern": "where\\(",
+            "matches": 4,
+            "examples": [
+              "where(",
+              "where(",
+              "where("
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "lineNumber": 208,
+            "content": "where(field: string, operator: string, value: any): Query {",
+            "pattern": "where\\("
+          },
+          {
+            "lineNumber": 240,
+            "content": "return new Query(this.collection, newFilter, this.sortOptions, this.limitCount, this.offsetCount);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 243,
+            "content": "orderBy(field: string, direction: 'asc' | 'desc' = 'asc'): Query {",
+            "pattern": "orderBy\\("
+          },
+          {
+            "lineNumber": 248,
+            "content": "return new Query(this.collection, this.filter, newSortOptions, this.limitCount, this.offsetCount);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 252,
+            "content": "return new Query(this.collection, this.filter, this.sortOptions, limit, this.offsetCount);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 256,
+            "content": "return new Query(this.collection, this.filter, this.sortOptions, this.limitCount, offset);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 288,
+            "content": "onSnapshot(",
+            "pattern": "onSnapshot\\("
+          },
+          {
+            "lineNumber": 333,
+            "content": "doc(docId?: string): DocumentReference {",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 382,
+            "content": "where(field: string, operator: string, value: any): Query {",
+            "pattern": "where\\("
+          },
+          {
+            "lineNumber": 383,
+            "content": "return new Query(this.collection).where(field, operator, value);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 383,
+            "content": "return new Query(this.collection).where(field, operator, value);",
+            "pattern": "where\\("
+          },
+          {
+            "lineNumber": 386,
+            "content": "orderBy(field: string, direction: 'asc' | 'desc' = 'asc'): Query {",
+            "pattern": "orderBy\\("
+          },
+          {
+            "lineNumber": 387,
+            "content": "return new Query(this.collection).orderBy(field, direction);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 387,
+            "content": "return new Query(this.collection).orderBy(field, direction);",
+            "pattern": "orderBy\\("
+          },
+          {
+            "lineNumber": 391,
+            "content": "return new Query(this.collection).limit(limit);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 395,
+            "content": "return new Query(this.collection).get();",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 398,
+            "content": "onSnapshot(",
+            "pattern": "onSnapshot\\("
+          },
+          {
+            "lineNumber": 402,
+            "content": "return new Query(this.collection).onSnapshot(onNext, onError);",
+            "pattern": "onSnapshot\\("
+          },
+          {
+            "lineNumber": 402,
+            "content": "return new Query(this.collection).onSnapshot(onNext, onError);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 428,
+            "content": "collection(name: string): CollectionReference {",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 432,
+            "content": "doc(path: string): DocumentReference {",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 442,
+            "content": "serverTimestamp(): Date {",
+            "pattern": "serverTimestamp\\("
+          },
+          {
+            "lineNumber": 449,
+            "content": "return db.collection(name);",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 453,
+            "content": "return db.doc(path);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 460,
+            "content": "let currentQuery = new Query((collection as any).collection);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 464,
+            "content": "currentQuery = currentQuery.where(constraint.field, constraint.operator, constraint.value);",
+            "pattern": "where\\("
+          },
+          {
+            "lineNumber": 466,
+            "content": "currentQuery = currentQuery.orderBy(constraint.field, constraint.direction);",
+            "pattern": "orderBy\\("
+          }
+        ],
+        "totalLines": 527,
+        "firebaseLineCount": 27
+      },
+      {
+        "file": "src/lib/adapters/simple-database-adapter.ts",
+        "patterns": [
+          {
+            "pattern": "collection\\(",
+            "matches": 2,
+            "examples": [
+              "collection(",
+              "collection("
+            ]
+          },
+          {
+            "pattern": "doc\\(",
+            "matches": 3,
+            "examples": [
+              "doc(",
+              "doc(",
+              "doc("
+            ]
+          },
+          {
+            "pattern": "onSnapshot\\(",
+            "matches": 3,
+            "examples": [
+              "onSnapshot(",
+              "onSnapshot(",
+              "onSnapshot("
+            ]
+          },
+          {
+            "pattern": "serverTimestamp\\(",
+            "matches": 1,
+            "examples": [
+              "serverTimestamp("
+            ]
+          },
+          {
+            "pattern": "query\\(",
+            "matches": 9,
+            "examples": [
+              "Query(",
+              "Query(",
+              "Query("
+            ]
+          },
+          {
+            "pattern": "orderBy\\(",
+            "matches": 4,
+            "examples": [
+              "orderBy(",
+              "orderBy(",
+              "orderBy("
+            ]
+          },
+          {
+            "pattern": "where\\(",
+            "matches": 4,
+            "examples": [
+              "where(",
+              "where(",
+              "where("
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "lineNumber": 105,
+            "content": "where(field: string, operator: string, value: any): Query {",
+            "pattern": "where\\("
+          },
+          {
+            "lineNumber": 107,
+            "content": "return new Query(this.collectionName, { ...this.filters, [field]: value }, this.sortOptions, this.limitCount);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 110,
+            "content": "orderBy(field: string, direction: 'asc' | 'desc' = 'asc'): Query {",
+            "pattern": "orderBy\\("
+          },
+          {
+            "lineNumber": 112,
+            "content": "return new Query(this.collectionName, this.filters, { ...this.sortOptions, [field]: direction }, this.limitCount);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 117,
+            "content": "return new Query(this.collectionName, this.filters, this.sortOptions, limit);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 125,
+            "content": "onSnapshot(",
+            "pattern": "onSnapshot\\("
+          },
+          {
+            "lineNumber": 147,
+            "content": "doc(docId?: string): DocumentReference {",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 162,
+            "content": "where(field: string, operator: string, value: any): Query {",
+            "pattern": "where\\("
+          },
+          {
+            "lineNumber": 163,
+            "content": "return new Query(this.collectionName).where(field, operator, value);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 163,
+            "content": "return new Query(this.collectionName).where(field, operator, value);",
+            "pattern": "where\\("
+          },
+          {
+            "lineNumber": 166,
+            "content": "orderBy(field: string, direction: 'asc' | 'desc' = 'asc'): Query {",
+            "pattern": "orderBy\\("
+          },
+          {
+            "lineNumber": 167,
+            "content": "return new Query(this.collectionName).orderBy(field, direction);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 167,
+            "content": "return new Query(this.collectionName).orderBy(field, direction);",
+            "pattern": "orderBy\\("
+          },
+          {
+            "lineNumber": 171,
+            "content": "return new Query(this.collectionName).limit(limit);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 175,
+            "content": "return new Query(this.collectionName).get();",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 178,
+            "content": "onSnapshot(",
+            "pattern": "onSnapshot\\("
+          },
+          {
+            "lineNumber": 182,
+            "content": "return new Query(this.collectionName).onSnapshot(onNext, onError);",
+            "pattern": "onSnapshot\\("
+          },
+          {
+            "lineNumber": 182,
+            "content": "return new Query(this.collectionName).onSnapshot(onNext, onError);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 200,
+            "content": "collection(name: string): CollectionReference {",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 204,
+            "content": "doc(path: string): DocumentReference {",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 214,
+            "content": "serverTimestamp(): Date {",
+            "pattern": "serverTimestamp\\("
+          },
+          {
+            "lineNumber": 221,
+            "content": "return db.collection(name);",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 225,
+            "content": "return db.doc(path);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 232,
+            "content": "let currentQuery = new Query((collection as any).collectionName);",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 236,
+            "content": "currentQuery = currentQuery.where(constraint.field, constraint.operator, constraint.value);",
+            "pattern": "where\\("
+          },
+          {
+            "lineNumber": 238,
+            "content": "currentQuery = currentQuery.orderBy(constraint.field, constraint.direction);",
+            "pattern": "orderBy\\("
+          }
+        ],
+        "totalLines": 289,
+        "firebaseLineCount": 26
+      },
+      {
+        "file": "src/app/admin/dashboard/qrcodes/page.tsx",
+        "patterns": [
+          {
+            "pattern": "firebase/firestore",
+            "matches": 1,
+            "examples": [
+              "firebase/firestore"
+            ]
+          },
+          {
+            "pattern": "from.*firebase",
+            "matches": 2,
+            "examples": [
+              "from \"@/lib/firebase",
+              "from \"firebase"
+            ]
+          },
+          {
+            "pattern": "import.*firebase",
+            "matches": 2,
+            "examples": [
+              "import { db } from \"@/lib/firebase",
+              "import { collection, addDoc, getDocs, serverTimestamp, doc, updateDoc, query, orderBy as firestoreOrderBy, writeBatch } from \"firebase"
+            ]
+          },
+          {
+            "pattern": "@/lib/firebase",
+            "matches": 1,
+            "examples": [
+              "@/lib/firebase"
+            ]
+          },
+          {
+            "pattern": "collection\\(",
+            "matches": 3,
+            "examples": [
+              "collection(",
+              "collection(",
+              "collection("
+            ]
+          },
+          {
+            "pattern": "doc\\(",
+            "matches": 6,
+            "examples": [
+              "doc(",
+              "Doc(",
+              "Doc("
+            ]
+          },
+          {
+            "pattern": "getDocs\\(",
+            "matches": 1,
+            "examples": [
+              "getDocs("
+            ]
+          },
+          {
+            "pattern": "addDoc\\(",
+            "matches": 1,
+            "examples": [
+              "addDoc("
+            ]
+          },
+          {
+            "pattern": "updateDoc\\(",
+            "matches": 2,
+            "examples": [
+              "updateDoc(",
+              "updateDoc("
+            ]
+          },
+          {
+            "pattern": "serverTimestamp\\(",
+            "matches": 3,
+            "examples": [
+              "serverTimestamp(",
+              "serverTimestamp(",
+              "serverTimestamp("
+            ]
+          },
+          {
+            "pattern": "query\\(",
+            "matches": 1,
+            "examples": [
+              "query("
+            ]
+          },
+          {
+            "pattern": "orderBy\\(",
+            "matches": 1,
+            "examples": [
+              "OrderBy("
+            ]
+          },
+          {
+            "pattern": "writeBatch\\(",
+            "matches": 1,
+            "examples": [
+              "writeBatch("
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "lineNumber": 17,
+            "content": "import { db } from \"@/lib/firebase\";",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 17,
+            "content": "import { db } from \"@/lib/firebase\";",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 17,
+            "content": "import { db } from \"@/lib/firebase\";",
+            "pattern": "@/lib/firebase"
+          },
+          {
+            "lineNumber": 20,
+            "content": "import { collection, addDoc, getDocs, serverTimestamp, doc, updateDoc, query, orderBy as firestoreOrderBy, writeBatch } from \"firebase/firestore\";",
+            "pattern": "firebase/firestore"
+          },
+          {
+            "lineNumber": 20,
+            "content": "import { collection, addDoc, getDocs, serverTimestamp, doc, updateDoc, query, orderBy as firestoreOrderBy, writeBatch } from \"firebase/firestore\";",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 20,
+            "content": "import { collection, addDoc, getDocs, serverTimestamp, doc, updateDoc, query, orderBy as firestoreOrderBy, writeBatch } from \"firebase/firestore\";",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 105,
+            "content": "const q = query(collection(db, \"bed-qrcodes\"), firestoreOrderBy(\"createdAt\", \"desc\"));",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 105,
+            "content": "const q = query(collection(db, \"bed-qrcodes\"), firestoreOrderBy(\"createdAt\", \"desc\"));",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 105,
+            "content": "const q = query(collection(db, \"bed-qrcodes\"), firestoreOrderBy(\"createdAt\", \"desc\"));",
+            "pattern": "orderBy\\("
+          },
+          {
+            "lineNumber": 106,
+            "content": "const querySnapshot = await getDocs(q);",
+            "pattern": "getDocs\\("
+          },
+          {
+            "lineNumber": 144,
+            "content": "const qrRef = doc(db, \"bed-qrcodes\", editingQrCode.id);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 145,
+            "content": "await updateDoc(qrRef, { ...qrDataPayload, lastUpdatedAt: serverTimestamp() });",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 145,
+            "content": "await updateDoc(qrRef, { ...qrDataPayload, lastUpdatedAt: serverTimestamp() });",
+            "pattern": "updateDoc\\("
+          },
+          {
+            "lineNumber": 145,
+            "content": "await updateDoc(qrRef, { ...qrDataPayload, lastUpdatedAt: serverTimestamp() });",
+            "pattern": "serverTimestamp\\("
+          },
+          {
+            "lineNumber": 148,
+            "content": "await addDoc(collection(db, \"bed-qrcodes\"), {",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 148,
+            "content": "await addDoc(collection(db, \"bed-qrcodes\"), {",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 148,
+            "content": "await addDoc(collection(db, \"bed-qrcodes\"), {",
+            "pattern": "addDoc\\("
+          },
+          {
+            "lineNumber": 151,
+            "content": "createdAt: serverTimestamp(),",
+            "pattern": "serverTimestamp\\("
+          },
+          {
+            "lineNumber": 169,
+            "content": "const batch = writeBatch(db);",
+            "pattern": "writeBatch\\("
+          },
+          {
+            "lineNumber": 170,
+            "content": "const qrCodesCollectionRef = collection(db, \"bed-qrcodes\");",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 191,
+            "content": "const newQrDocRef = doc(qrCodesCollectionRef); // Auto-generate ID",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 199,
+            "content": "createdAt: serverTimestamp(),",
+            "pattern": "serverTimestamp\\("
+          },
+          {
+            "lineNumber": 228,
+            "content": "const qrRef = doc(db, \"bed-qrcodes\", qr.id);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 229,
+            "content": "await updateDoc(qrRef, {isActive: !qr.isActive});",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 229,
+            "content": "await updateDoc(qrRef, {isActive: !qr.isActive});",
+            "pattern": "updateDoc\\("
+          }
+        ],
+        "totalLines": 513,
+        "firebaseLineCount": 25
+      },
+      {
+        "file": "src/app/merchant/dashboard/menu/page.tsx",
         "patterns": [
           {
             "pattern": "firebase/firestore",
@@ -1976,6 +2529,193 @@
             "examples": [
               "from '@/lib/firebase",
               "from 'firebase"
+            ]
+          },
+          {
+            "pattern": "import.*firebase",
+            "matches": 2,
+            "examples": [
+              "import { db } from '@/lib/firebase",
+              "import { doc, getDoc, updateDoc, arrayUnion, arrayRemove } from 'firebase"
+            ]
+          },
+          {
+            "pattern": "@/lib/firebase",
+            "matches": 1,
+            "examples": [
+              "@/lib/firebase"
+            ]
+          },
+          {
+            "pattern": "doc\\(",
+            "matches": 9,
+            "examples": [
+              "doc(",
+              "Doc(",
+              "doc("
+            ]
+          },
+          {
+            "pattern": "getDoc\\(",
+            "matches": 1,
+            "examples": [
+              "getDoc("
+            ]
+          },
+          {
+            "pattern": "updateDoc\\(",
+            "matches": 4,
+            "examples": [
+              "updateDoc(",
+              "updateDoc(",
+              "updateDoc("
+            ]
+          },
+          {
+            "pattern": "arrayUnion\\(",
+            "matches": 1,
+            "examples": [
+              "arrayUnion("
+            ]
+          },
+          {
+            "pattern": "arrayRemove\\(",
+            "matches": 1,
+            "examples": [
+              "arrayRemove("
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "lineNumber": 8,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 8,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 8,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "@/lib/firebase"
+          },
+          {
+            "lineNumber": 9,
+            "content": "import { doc, getDoc, updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore';",
+            "pattern": "firebase/firestore"
+          },
+          {
+            "lineNumber": 9,
+            "content": "import { doc, getDoc, updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore';",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 9,
+            "content": "import { doc, getDoc, updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore';",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 49,
+            "content": "const restaurantRef = doc(db, \"restaurants\", restaurantId);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 50,
+            "content": "const docSnap = await getDoc(restaurantRef);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 50,
+            "content": "const docSnap = await getDoc(restaurantRef);",
+            "pattern": "getDoc\\("
+          },
+          {
+            "lineNumber": 83,
+            "content": "const restaurantRef = doc(db, \"restaurants\", currentUser.uid);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 103,
+            "content": "await updateDoc(restaurantRef, { menu: updatedMenuItems });",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 103,
+            "content": "await updateDoc(restaurantRef, { menu: updatedMenuItems });",
+            "pattern": "updateDoc\\("
+          },
+          {
+            "lineNumber": 117,
+            "content": "await updateDoc(restaurantRef, { menu: arrayUnion(newItem) });",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 117,
+            "content": "await updateDoc(restaurantRef, { menu: arrayUnion(newItem) });",
+            "pattern": "updateDoc\\("
+          },
+          {
+            "lineNumber": 117,
+            "content": "await updateDoc(restaurantRef, { menu: arrayUnion(newItem) });",
+            "pattern": "arrayUnion\\("
+          },
+          {
+            "lineNumber": 134,
+            "content": "const restaurantRef = doc(db, \"restaurants\", currentUser.uid);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 139,
+            "content": "await updateDoc(restaurantRef, { menu: arrayRemove(itemToDelete) });",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 139,
+            "content": "await updateDoc(restaurantRef, { menu: arrayRemove(itemToDelete) });",
+            "pattern": "updateDoc\\("
+          },
+          {
+            "lineNumber": 139,
+            "content": "await updateDoc(restaurantRef, { menu: arrayRemove(itemToDelete) });",
+            "pattern": "arrayRemove\\("
+          },
+          {
+            "lineNumber": 153,
+            "content": "const restaurantRef = doc(db, \"restaurants\", currentUser.uid);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 159,
+            "content": "await updateDoc(restaurantRef, { menu: updatedMenuItems });",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 159,
+            "content": "await updateDoc(restaurantRef, { menu: updatedMenuItems });",
+            "pattern": "updateDoc\\("
+          }
+        ],
+        "totalLines": 324,
+        "firebaseLineCount": 22
+      },
+      {
+        "file": "src/contexts/order-context.tsx",
+        "patterns": [
+          {
+            "pattern": "firebase/firestore",
+            "matches": 1,
+            "examples": [
+              "firebase/firestore"
+            ]
+          },
+          {
+            "pattern": "from.*firebase",
+            "matches": 1,
+            "examples": [
+              "from '@/lib/firebase"
             ]
           },
           {
@@ -2003,40 +2743,10 @@
           },
           {
             "pattern": "doc\\(",
-            "matches": 6,
-            "examples": [
-              "Doc(",
-              "Doc(",
-              "doc("
-            ]
-          },
-          {
-            "pattern": "getDoc\\(",
-            "matches": 1,
-            "examples": [
-              "getDoc("
-            ]
-          },
-          {
-            "pattern": "getDocs\\(",
-            "matches": 1,
-            "examples": [
-              "getDocs("
-            ]
-          },
-          {
-            "pattern": "addDoc\\(",
-            "matches": 1,
-            "examples": [
-              "addDoc("
-            ]
-          },
-          {
-            "pattern": "updateDoc\\(",
             "matches": 2,
             "examples": [
-              "updateDoc(",
-              "updateDoc("
+              "doc(",
+              "doc("
             ]
           },
           {
@@ -2059,14 +2769,6 @@
             "examples": [
               "Timestamp.",
               "Timestamp."
-            ]
-          },
-          {
-            "pattern": "query\\(",
-            "matches": 2,
-            "examples": [
-              "query(",
-              "query("
             ]
           },
           {
@@ -2095,131 +2797,218 @@
             "pattern": "@/lib/firebase"
           },
           {
-            "lineNumber": 21,
-            "content": "} from 'firebase/firestore';",
+            "lineNumber": 9,
+            "content": "// 无需直接导入 firebase/firestore",
             "pattern": "firebase/firestore"
           },
           {
-            "lineNumber": 21,
-            "content": "} from 'firebase/firestore';",
-            "pattern": "from.*firebase"
-          },
-          {
-            "lineNumber": 58,
-            "content": "const ordersCollectionRef = collection(db, \"orders\");",
+            "lineNumber": 47,
+            "content": "const ordersCollectionRef = db.collection(\"orders\");",
             "pattern": "collection\\("
           },
           {
-            "lineNumber": 59,
-            "content": "const q = query(ordersCollectionRef, orderBy(\"orderDate\", \"desc\"));",
-            "pattern": "query\\("
-          },
-          {
-            "lineNumber": 59,
-            "content": "const q = query(ordersCollectionRef, orderBy(\"orderDate\", \"desc\"));",
+            "lineNumber": 48,
+            "content": "const q = ordersCollectionRef.orderBy(\"orderDate\", \"desc\");",
             "pattern": "orderBy\\("
           },
           {
-            "lineNumber": 60,
-            "content": "const querySnapshot = await getDocs(q);",
-            "pattern": "getDocs\\("
-          },
-          {
-            "lineNumber": 98,
-            "content": "const ordersCollectionRef = collection(db, \"orders\");",
+            "lineNumber": 88,
+            "content": "const ordersCollectionRef = db.collection(\"orders\");",
             "pattern": "collection\\("
           },
           {
-            "lineNumber": 99,
-            "content": "const q = query(ordersCollectionRef, orderBy(\"orderDate\", \"desc\"));",
-            "pattern": "query\\("
-          },
-          {
-            "lineNumber": 99,
-            "content": "const q = query(ordersCollectionRef, orderBy(\"orderDate\", \"desc\"));",
+            "lineNumber": 89,
+            "content": "const q = ordersCollectionRef.orderBy(\"orderDate\", \"desc\");",
             "pattern": "orderBy\\("
           },
           {
-            "lineNumber": 101,
-            "content": "const unsubscribe = onSnapshot(q, (querySnapshot) => {",
+            "lineNumber": 91,
+            "content": "const unsubscribe = q.onSnapshot((querySnapshot) => {",
             "pattern": "onSnapshot\\("
           },
           {
-            "lineNumber": 146,
-            "content": "const ordersCollectionRef = collection(db, \"orders\");",
+            "lineNumber": 136,
+            "content": "const ordersCollectionRef = db.collection(\"orders\");",
             "pattern": "collection\\("
           },
           {
-            "lineNumber": 159,
-            "content": "orderDate: serverTimestamp(),",
+            "lineNumber": 149,
+            "content": "orderDate: db.serverTimestamp ? db.serverTimestamp() : new Date(),",
             "pattern": "serverTimestamp\\("
           },
           {
-            "lineNumber": 164,
+            "lineNumber": 154,
             "content": "docDataWithTimestamp.appliedPromotion = orderData.appliedPromotion;",
             "pattern": "Timestamp\\."
           },
           {
-            "lineNumber": 167,
+            "lineNumber": 157,
             "content": "docDataWithTimestamp.discountAmount = orderData.discountAmount;",
             "pattern": "Timestamp\\."
           },
           {
-            "lineNumber": 171,
-            "content": "const docRef = await addDoc(ordersCollectionRef, docDataWithTimestamp);",
+            "lineNumber": 209,
+            "content": "const orderRef = db.doc(`orders/${orderId}`);",
             "pattern": "doc\\("
           },
           {
-            "lineNumber": 171,
-            "content": "const docRef = await addDoc(ordersCollectionRef, docDataWithTimestamp);",
-            "pattern": "addDoc\\("
+            "lineNumber": 229,
+            "content": "const orderRef = db.doc(`orders/${orderId}`);",
+            "pattern": "doc\\("
+          }
+        ],
+        "totalLines": 266,
+        "firebaseLineCount": 15
+      },
+      {
+        "file": "src/app/admin/dashboard/merchants/page.tsx",
+        "patterns": [
+          {
+            "pattern": "firebase/firestore",
+            "matches": 1,
+            "examples": [
+              "firebase/firestore"
+            ]
           },
           {
-            "lineNumber": 172,
-            "content": "const newDocSnap = await getDoc(docRef);",
+            "pattern": "from.*firebase",
+            "matches": 2,
+            "examples": [
+              "from \"@/lib/firebase",
+              "from \"firebase"
+            ]
+          },
+          {
+            "pattern": "import.*firebase",
+            "matches": 2,
+            "examples": [
+              "import { db } from \"@/lib/firebase",
+              "import { collection, getDocs, query, orderBy as firestoreOrderBy, doc, updateDoc } from \"firebase"
+            ]
+          },
+          {
+            "pattern": "@/lib/firebase",
+            "matches": 1,
+            "examples": [
+              "@/lib/firebase"
+            ]
+          },
+          {
+            "pattern": "collection\\(",
+            "matches": 1,
+            "examples": [
+              "collection("
+            ]
+          },
+          {
+            "pattern": "doc\\(",
+            "matches": 2,
+            "examples": [
+              "doc(",
+              "Doc("
+            ]
+          },
+          {
+            "pattern": "getDocs\\(",
+            "matches": 1,
+            "examples": [
+              "getDocs("
+            ]
+          },
+          {
+            "pattern": "updateDoc\\(",
+            "matches": 1,
+            "examples": [
+              "updateDoc("
+            ]
+          },
+          {
+            "pattern": "query\\(",
+            "matches": 1,
+            "examples": [
+              "query("
+            ]
+          },
+          {
+            "pattern": "orderBy\\(",
+            "matches": 1,
+            "examples": [
+              "OrderBy("
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "lineNumber": 13,
+            "content": "import { db } from \"@/lib/firebase\";",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 13,
+            "content": "import { db } from \"@/lib/firebase\";",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 13,
+            "content": "import { db } from \"@/lib/firebase\";",
+            "pattern": "@/lib/firebase"
+          },
+          {
+            "lineNumber": 14,
+            "content": "import { collection, getDocs, query, orderBy as firestoreOrderBy, doc, updateDoc } from \"firebase/firestore\";",
+            "pattern": "firebase/firestore"
+          },
+          {
+            "lineNumber": 14,
+            "content": "import { collection, getDocs, query, orderBy as firestoreOrderBy, doc, updateDoc } from \"firebase/firestore\";",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 14,
+            "content": "import { collection, getDocs, query, orderBy as firestoreOrderBy, doc, updateDoc } from \"firebase/firestore\";",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 61,
+            "content": "const restaurantsCollectionRef = collection(db, \"restaurants\");",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 62,
+            "content": "const q = query(restaurantsCollectionRef, firestoreOrderBy(\"name\"));",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 62,
+            "content": "const q = query(restaurantsCollectionRef, firestoreOrderBy(\"name\"));",
+            "pattern": "orderBy\\("
+          },
+          {
+            "lineNumber": 63,
+            "content": "const querySnapshot = await getDocs(q);",
+            "pattern": "getDocs\\("
+          },
+          {
+            "lineNumber": 80,
+            "content": "const restaurantRef = doc(db, \"restaurants\", restaurantId);",
             "pattern": "doc\\("
           },
           {
-            "lineNumber": 172,
-            "content": "const newDocSnap = await getDoc(docRef);",
-            "pattern": "getDoc\\("
-          },
-          {
-            "lineNumber": 217,
-            "content": "const orderRef = doc(db, \"orders\", orderId);",
+            "lineNumber": 81,
+            "content": "await updateDoc(restaurantRef, { status: newStatus });",
             "pattern": "doc\\("
           },
           {
-            "lineNumber": 218,
-            "content": "await updateDoc(orderRef, { status });",
-            "pattern": "doc\\("
-          },
-          {
-            "lineNumber": 218,
-            "content": "await updateDoc(orderRef, { status });",
-            "pattern": "updateDoc\\("
-          },
-          {
-            "lineNumber": 236,
-            "content": "const orderRef = doc(db, \"orders\", orderId);",
-            "pattern": "doc\\("
-          },
-          {
-            "lineNumber": 237,
-            "content": "await updateDoc(orderRef, { rating });",
-            "pattern": "doc\\("
-          },
-          {
-            "lineNumber": 237,
-            "content": "await updateDoc(orderRef, { rating });",
+            "lineNumber": 81,
+            "content": "await updateDoc(restaurantRef, { status: newStatus });",
             "pattern": "updateDoc\\("
           }
         ],
-        "totalLines": 273,
-        "firebaseLineCount": 27
+        "totalLines": 197,
+        "firebaseLineCount": 13
       },
       {
-        "file": "src\\contexts\\favorites-context.tsx",
+        "file": "src/app/merchant/dashboard/promotions/page.tsx",
         "patterns": [
           {
             "pattern": "firebase/firestore",
@@ -2234,6 +3023,984 @@
             "examples": [
               "from '@/lib/firebase",
               "from 'firebase"
+            ]
+          },
+          {
+            "pattern": "import.*firebase",
+            "matches": 2,
+            "examples": [
+              "import { db } from '@/lib/firebase",
+              "import { doc, getDoc, updateDoc } from 'firebase"
+            ]
+          },
+          {
+            "pattern": "@/lib/firebase",
+            "matches": 1,
+            "examples": [
+              "@/lib/firebase"
+            ]
+          },
+          {
+            "pattern": "doc\\(",
+            "matches": 4,
+            "examples": [
+              "doc(",
+              "Doc(",
+              "doc("
+            ]
+          },
+          {
+            "pattern": "getDoc\\(",
+            "matches": 1,
+            "examples": [
+              "getDoc("
+            ]
+          },
+          {
+            "pattern": "updateDoc\\(",
+            "matches": 1,
+            "examples": [
+              "updateDoc("
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "lineNumber": 8,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 8,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 8,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "@/lib/firebase"
+          },
+          {
+            "lineNumber": 9,
+            "content": "import { doc, getDoc, updateDoc } from 'firebase/firestore';",
+            "pattern": "firebase/firestore"
+          },
+          {
+            "lineNumber": 9,
+            "content": "import { doc, getDoc, updateDoc } from 'firebase/firestore';",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 9,
+            "content": "import { doc, getDoc, updateDoc } from 'firebase/firestore';",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 57,
+            "content": "const restaurantRef = doc(db, \"restaurants\", restaurantId);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 58,
+            "content": "const docSnap = await getDoc(restaurantRef);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 58,
+            "content": "const docSnap = await getDoc(restaurantRef);",
+            "pattern": "getDoc\\("
+          },
+          {
+            "lineNumber": 99,
+            "content": "const restaurantRef = doc(db, \"restaurants\", currentUser.uid);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 100,
+            "content": "await updateDoc(restaurantRef, { promotions: promotions });",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 100,
+            "content": "await updateDoc(restaurantRef, { promotions: promotions });",
+            "pattern": "updateDoc\\("
+          }
+        ],
+        "totalLines": 292,
+        "firebaseLineCount": 12
+      },
+      {
+        "file": "src/app/merchant/dashboard/settings/page.tsx",
+        "patterns": [
+          {
+            "pattern": "firebase/firestore",
+            "matches": 1,
+            "examples": [
+              "firebase/firestore"
+            ]
+          },
+          {
+            "pattern": "from.*firebase",
+            "matches": 2,
+            "examples": [
+              "from '@/lib/firebase",
+              "from 'firebase"
+            ]
+          },
+          {
+            "pattern": "import.*firebase",
+            "matches": 2,
+            "examples": [
+              "import { db } from '@/lib/firebase",
+              "import { doc, getDoc, updateDoc } from 'firebase"
+            ]
+          },
+          {
+            "pattern": "@/lib/firebase",
+            "matches": 1,
+            "examples": [
+              "@/lib/firebase"
+            ]
+          },
+          {
+            "pattern": "doc\\(",
+            "matches": 4,
+            "examples": [
+              "doc(",
+              "Doc(",
+              "doc("
+            ]
+          },
+          {
+            "pattern": "getDoc\\(",
+            "matches": 1,
+            "examples": [
+              "getDoc("
+            ]
+          },
+          {
+            "pattern": "updateDoc\\(",
+            "matches": 1,
+            "examples": [
+              "updateDoc("
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "lineNumber": 9,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 9,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 9,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "@/lib/firebase"
+          },
+          {
+            "lineNumber": 10,
+            "content": "import { doc, getDoc, updateDoc } from 'firebase/firestore';",
+            "pattern": "firebase/firestore"
+          },
+          {
+            "lineNumber": 10,
+            "content": "import { doc, getDoc, updateDoc } from 'firebase/firestore';",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 10,
+            "content": "import { doc, getDoc, updateDoc } from 'firebase/firestore';",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 72,
+            "content": "const restaurantRef = doc(db, \"restaurants\", currentUser.uid);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 73,
+            "content": "const docSnap = await getDoc(restaurantRef);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 73,
+            "content": "const docSnap = await getDoc(restaurantRef);",
+            "pattern": "getDoc\\("
+          },
+          {
+            "lineNumber": 316,
+            "content": "const restaurantRef = doc(db, \"restaurants\", currentUser.uid);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 328,
+            "content": "await updateDoc(restaurantRef, updatedRestaurantData);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 328,
+            "content": "await updateDoc(restaurantRef, updatedRestaurantData);",
+            "pattern": "updateDoc\\("
+          }
+        ],
+        "totalLines": 586,
+        "firebaseLineCount": 12
+      },
+      {
+        "file": "src/lib/adapters/test-suite.ts",
+        "patterns": [
+          {
+            "pattern": "collection\\(",
+            "matches": 7,
+            "examples": [
+              "Collection(",
+              "collection(",
+              "Collection("
+            ]
+          },
+          {
+            "pattern": "doc\\(",
+            "matches": 2,
+            "examples": [
+              "doc(",
+              "doc("
+            ]
+          },
+          {
+            "pattern": "onSnapshot\\(",
+            "matches": 1,
+            "examples": [
+              "onSnapshot("
+            ]
+          },
+          {
+            "pattern": "orderBy\\(",
+            "matches": 1,
+            "examples": [
+              "orderBy("
+            ]
+          },
+          {
+            "pattern": "where\\(",
+            "matches": 1,
+            "examples": [
+              "where("
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "lineNumber": 75,
+            "content": "await this.runTest('集合创建测试', () => this.testCollection());",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 89,
+            "content": "const testCollection = this.db.collection('test_connection');",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 90,
+            "content": "const testDoc = testCollection.doc('test');",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 102,
+            "content": "private async testCollection(): Promise<void> {",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 103,
+            "content": "const collection = this.db.collection('test_collection');",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 125,
+            "content": "const collection = this.db.collection('test_docs');",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 126,
+            "content": "const docRef = collection.doc('test_doc');",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 162,
+            "content": "const collection = this.db.collection('test_queries');",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 170,
+            "content": "let query = collection.where('active', '==', true);",
+            "pattern": "where\\("
+          },
+          {
+            "lineNumber": 178,
+            "content": "query = collection.orderBy('priority', 'desc').limit(2);",
+            "pattern": "orderBy\\("
+          },
+          {
+            "lineNumber": 198,
+            "content": "const collection = this.db.collection('test_realtime');",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 202,
+            "content": "const unsubscribe = collection.onSnapshot((snapshot: any) => {",
+            "pattern": "onSnapshot\\("
+          }
+        ],
+        "totalLines": 532,
+        "firebaseLineCount": 12
+      },
+      {
+        "file": "src/lib/database.ts",
+        "patterns": [
+          {
+            "pattern": "firebase/firestore",
+            "matches": 1,
+            "examples": [
+              "firebase/firestore"
+            ]
+          },
+          {
+            "pattern": "firebase/auth",
+            "matches": 1,
+            "examples": [
+              "firebase/auth"
+            ]
+          },
+          {
+            "pattern": "firebase/storage",
+            "matches": 1,
+            "examples": [
+              "firebase/storage"
+            ]
+          },
+          {
+            "pattern": "firebase/app",
+            "matches": 1,
+            "examples": [
+              "firebase/app"
+            ]
+          },
+          {
+            "pattern": "from.*firebase",
+            "matches": 4,
+            "examples": [
+              "from \"firebase",
+              "from \"firebase",
+              "from \"firebase"
+            ]
+          },
+          {
+            "pattern": "import.*firebase",
+            "matches": 4,
+            "examples": [
+              "import { initializeApp, getApps, type FirebaseApp } from \"firebase",
+              "import { getFirestore, initializeFirestore, type Firestore } from \"firebase",
+              "import { getAuth as getFirebaseAuth, type Auth } from \"firebase"
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "lineNumber": 46,
+            "content": "import { initializeApp, getApps, type FirebaseApp } from \"firebase/app\";",
+            "pattern": "firebase/app"
+          },
+          {
+            "lineNumber": 46,
+            "content": "import { initializeApp, getApps, type FirebaseApp } from \"firebase/app\";",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 46,
+            "content": "import { initializeApp, getApps, type FirebaseApp } from \"firebase/app\";",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 47,
+            "content": "import { getFirestore, initializeFirestore, type Firestore } from \"firebase/firestore\";",
+            "pattern": "firebase/firestore"
+          },
+          {
+            "lineNumber": 47,
+            "content": "import { getFirestore, initializeFirestore, type Firestore } from \"firebase/firestore\";",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 47,
+            "content": "import { getFirestore, initializeFirestore, type Firestore } from \"firebase/firestore\";",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 48,
+            "content": "import { getAuth as getFirebaseAuth, type Auth } from \"firebase/auth\";",
+            "pattern": "firebase/auth"
+          },
+          {
+            "lineNumber": 48,
+            "content": "import { getAuth as getFirebaseAuth, type Auth } from \"firebase/auth\";",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 48,
+            "content": "import { getAuth as getFirebaseAuth, type Auth } from \"firebase/auth\";",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 49,
+            "content": "import { getStorage as getFirebaseStorage, type FirebaseStorage } from \"firebase/storage\";",
+            "pattern": "firebase/storage"
+          },
+          {
+            "lineNumber": 49,
+            "content": "import { getStorage as getFirebaseStorage, type FirebaseStorage } from \"firebase/storage\";",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 49,
+            "content": "import { getStorage as getFirebaseStorage, type FirebaseStorage } from \"firebase/storage\";",
+            "pattern": "import.*firebase"
+          }
+        ],
+        "totalLines": 241,
+        "firebaseLineCount": 12
+      },
+      {
+        "file": "src/app/restaurants/page.tsx",
+        "patterns": [
+          {
+            "pattern": "firebase/firestore",
+            "matches": 1,
+            "examples": [
+              "firebase/firestore"
+            ]
+          },
+          {
+            "pattern": "from.*firebase",
+            "matches": 2,
+            "examples": [
+              "from '@/lib/firebase",
+              "from 'firebase"
+            ]
+          },
+          {
+            "pattern": "import.*firebase",
+            "matches": 2,
+            "examples": [
+              "import { db } from '@/lib/firebase",
+              "import { collection, getDocs, query, where } from 'firebase"
+            ]
+          },
+          {
+            "pattern": "@/lib/firebase",
+            "matches": 1,
+            "examples": [
+              "@/lib/firebase"
+            ]
+          },
+          {
+            "pattern": "collection\\(",
+            "matches": 1,
+            "examples": [
+              "collection("
+            ]
+          },
+          {
+            "pattern": "getDocs\\(",
+            "matches": 1,
+            "examples": [
+              "getDocs("
+            ]
+          },
+          {
+            "pattern": "query\\(",
+            "matches": 1,
+            "examples": [
+              "query("
+            ]
+          },
+          {
+            "pattern": "where\\(",
+            "matches": 1,
+            "examples": [
+              "where("
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "lineNumber": 11,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 11,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 11,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "@/lib/firebase"
+          },
+          {
+            "lineNumber": 12,
+            "content": "import { collection, getDocs, query, where } from 'firebase/firestore'; // Added query and where",
+            "pattern": "firebase/firestore"
+          },
+          {
+            "lineNumber": 12,
+            "content": "import { collection, getDocs, query, where } from 'firebase/firestore'; // Added query and where",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 12,
+            "content": "import { collection, getDocs, query, where } from 'firebase/firestore'; // Added query and where",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 45,
+            "content": "const restaurantsCollectionRef = collection(db, \"restaurants\");",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 47,
+            "content": "const q = query(restaurantsCollectionRef, where(\"status\", \"==\", \"Approved\"));",
+            "pattern": "query\\("
+          },
+          {
+            "lineNumber": 47,
+            "content": "const q = query(restaurantsCollectionRef, where(\"status\", \"==\", \"Approved\"));",
+            "pattern": "where\\("
+          },
+          {
+            "lineNumber": 48,
+            "content": "const querySnapshot = await getDocs(q);",
+            "pattern": "getDocs\\("
+          }
+        ],
+        "totalLines": 173,
+        "firebaseLineCount": 10
+      },
+      {
+        "file": "src/app/cart/page.tsx",
+        "patterns": [
+          {
+            "pattern": "firebase/firestore",
+            "matches": 1,
+            "examples": [
+              "firebase/firestore"
+            ]
+          },
+          {
+            "pattern": "from.*firebase",
+            "matches": 2,
+            "examples": [
+              "from '@/lib/firebase",
+              "from 'firebase"
+            ]
+          },
+          {
+            "pattern": "import.*firebase",
+            "matches": 2,
+            "examples": [
+              "import { db } from '@/lib/firebase",
+              "import { doc, getDoc } from 'firebase"
+            ]
+          },
+          {
+            "pattern": "@/lib/firebase",
+            "matches": 1,
+            "examples": [
+              "@/lib/firebase"
+            ]
+          },
+          {
+            "pattern": "doc\\(",
+            "matches": 2,
+            "examples": [
+              "doc(",
+              "Doc("
+            ]
+          },
+          {
+            "pattern": "getDoc\\(",
+            "matches": 1,
+            "examples": [
+              "getDoc("
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "lineNumber": 13,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 13,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 13,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "@/lib/firebase"
+          },
+          {
+            "lineNumber": 14,
+            "content": "import { doc, getDoc } from 'firebase/firestore';",
+            "pattern": "firebase/firestore"
+          },
+          {
+            "lineNumber": 14,
+            "content": "import { doc, getDoc } from 'firebase/firestore';",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 14,
+            "content": "import { doc, getDoc } from 'firebase/firestore';",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 35,
+            "content": "const restaurantDocRef = doc(db, \"restaurants\", restaurantId);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 36,
+            "content": "const docSnap = await getDoc(restaurantDocRef);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 36,
+            "content": "const docSnap = await getDoc(restaurantDocRef);",
+            "pattern": "getDoc\\("
+          }
+        ],
+        "totalLines": 181,
+        "firebaseLineCount": 9
+      },
+      {
+        "file": "src/app/checkout/page.tsx",
+        "patterns": [
+          {
+            "pattern": "firebase/firestore",
+            "matches": 1,
+            "examples": [
+              "firebase/firestore"
+            ]
+          },
+          {
+            "pattern": "from.*firebase",
+            "matches": 2,
+            "examples": [
+              "from '@/lib/firebase",
+              "from 'firebase"
+            ]
+          },
+          {
+            "pattern": "import.*firebase",
+            "matches": 2,
+            "examples": [
+              "import { db } from '@/lib/firebase",
+              "import { doc, getDoc } from 'firebase"
+            ]
+          },
+          {
+            "pattern": "@/lib/firebase",
+            "matches": 1,
+            "examples": [
+              "@/lib/firebase"
+            ]
+          },
+          {
+            "pattern": "doc\\(",
+            "matches": 2,
+            "examples": [
+              "doc(",
+              "Doc("
+            ]
+          },
+          {
+            "pattern": "getDoc\\(",
+            "matches": 1,
+            "examples": [
+              "getDoc("
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "lineNumber": 18,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 18,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 18,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "@/lib/firebase"
+          },
+          {
+            "lineNumber": 19,
+            "content": "import { doc, getDoc } from 'firebase/firestore';",
+            "pattern": "firebase/firestore"
+          },
+          {
+            "lineNumber": 19,
+            "content": "import { doc, getDoc } from 'firebase/firestore';",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 19,
+            "content": "import { doc, getDoc } from 'firebase/firestore';",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 70,
+            "content": "const restaurantDocRef = doc(db, \"restaurants\", cartRestaurantId);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 71,
+            "content": "const docSnap = await getDoc(restaurantDocRef);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 71,
+            "content": "const docSnap = await getDoc(restaurantDocRef);",
+            "pattern": "getDoc\\("
+          }
+        ],
+        "totalLines": 409,
+        "firebaseLineCount": 9
+      },
+      {
+        "file": "src/app/favorites/page.tsx",
+        "patterns": [
+          {
+            "pattern": "firebase/firestore",
+            "matches": 1,
+            "examples": [
+              "firebase/firestore"
+            ]
+          },
+          {
+            "pattern": "from.*firebase",
+            "matches": 2,
+            "examples": [
+              "from '@/lib/firebase",
+              "from 'firebase"
+            ]
+          },
+          {
+            "pattern": "import.*firebase",
+            "matches": 2,
+            "examples": [
+              "import { db } from '@/lib/firebase",
+              "import { doc, getDoc } from 'firebase"
+            ]
+          },
+          {
+            "pattern": "@/lib/firebase",
+            "matches": 1,
+            "examples": [
+              "@/lib/firebase"
+            ]
+          },
+          {
+            "pattern": "doc\\(",
+            "matches": 2,
+            "examples": [
+              "doc(",
+              "Doc("
+            ]
+          },
+          {
+            "pattern": "getDoc\\(",
+            "matches": 1,
+            "examples": [
+              "getDoc("
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "lineNumber": 11,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 11,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 11,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "@/lib/firebase"
+          },
+          {
+            "lineNumber": 12,
+            "content": "import { doc, getDoc } from 'firebase/firestore';",
+            "pattern": "firebase/firestore"
+          },
+          {
+            "lineNumber": 12,
+            "content": "import { doc, getDoc } from 'firebase/firestore';",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 12,
+            "content": "import { doc, getDoc } from 'firebase/firestore';",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 42,
+            "content": "const docRef = doc(db, \"restaurants\", fav.restaurantId);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 43,
+            "content": "const docSnap = await getDoc(docRef);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 43,
+            "content": "const docSnap = await getDoc(docRef);",
+            "pattern": "getDoc\\("
+          }
+        ],
+        "totalLines": 146,
+        "firebaseLineCount": 9
+      },
+      {
+        "file": "src/app/restaurants/[restaurantId]/page.tsx",
+        "patterns": [
+          {
+            "pattern": "firebase/firestore",
+            "matches": 1,
+            "examples": [
+              "firebase/firestore"
+            ]
+          },
+          {
+            "pattern": "from.*firebase",
+            "matches": 2,
+            "examples": [
+              "from '@/lib/firebase",
+              "from 'firebase"
+            ]
+          },
+          {
+            "pattern": "import.*firebase",
+            "matches": 2,
+            "examples": [
+              "import { db } from '@/lib/firebase",
+              "import { doc, getDoc } from 'firebase"
+            ]
+          },
+          {
+            "pattern": "@/lib/firebase",
+            "matches": 1,
+            "examples": [
+              "@/lib/firebase"
+            ]
+          },
+          {
+            "pattern": "doc\\(",
+            "matches": 2,
+            "examples": [
+              "doc(",
+              "Doc("
+            ]
+          },
+          {
+            "pattern": "getDoc\\(",
+            "matches": 1,
+            "examples": [
+              "getDoc("
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "lineNumber": 16,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 16,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 16,
+            "content": "import { db } from '@/lib/firebase';",
+            "pattern": "@/lib/firebase"
+          },
+          {
+            "lineNumber": 17,
+            "content": "import { doc, getDoc } from 'firebase/firestore';",
+            "pattern": "firebase/firestore"
+          },
+          {
+            "lineNumber": 17,
+            "content": "import { doc, getDoc } from 'firebase/firestore';",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 17,
+            "content": "import { doc, getDoc } from 'firebase/firestore';",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 47,
+            "content": "const restaurantDocRef = doc(db, \"restaurants\", restaurantId);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 48,
+            "content": "const docSnap = await getDoc(restaurantDocRef);",
+            "pattern": "doc\\("
+          },
+          {
+            "lineNumber": 48,
+            "content": "const docSnap = await getDoc(restaurantDocRef);",
+            "pattern": "getDoc\\("
+          }
+        ],
+        "totalLines": 217,
+        "firebaseLineCount": 9
+      },
+      {
+        "file": "src/contexts/favorites-context.tsx",
+        "patterns": [
+          {
+            "pattern": "firebase/firestore",
+            "matches": 1,
+            "examples": [
+              "firebase/firestore"
+            ]
+          },
+          {
+            "pattern": "from.*firebase",
+            "matches": 1,
+            "examples": [
+              "from '@/lib/firebase"
             ]
           },
           {
@@ -2259,46 +4026,10 @@
           },
           {
             "pattern": "doc\\(",
-            "matches": 4,
+            "matches": 2,
             "examples": [
               "doc(",
-              "Doc(",
               "doc("
-            ]
-          },
-          {
-            "pattern": "getDocs\\(",
-            "matches": 1,
-            "examples": [
-              "getDocs("
-            ]
-          },
-          {
-            "pattern": "deleteDoc\\(",
-            "matches": 1,
-            "examples": [
-              "deleteDoc("
-            ]
-          },
-          {
-            "pattern": "setDoc\\(",
-            "matches": 1,
-            "examples": [
-              "setDoc("
-            ]
-          },
-          {
-            "pattern": "Timestamp\\.",
-            "matches": 1,
-            "examples": [
-              "Timestamp."
-            ]
-          },
-          {
-            "pattern": "query\\(",
-            "matches": 1,
-            "examples": [
-              "query("
             ]
           },
           {
@@ -2326,120 +4057,186 @@
             "pattern": "@/lib/firebase"
           },
           {
-            "lineNumber": 18,
-            "content": "} from 'firebase/firestore';",
+            "lineNumber": 10,
+            "content": "// 无需直接导入 firebase/firestore",
             "pattern": "firebase/firestore"
           },
           {
-            "lineNumber": 18,
-            "content": "} from 'firebase/firestore';",
-            "pattern": "from.*firebase"
-          },
-          {
-            "lineNumber": 42,
-            "content": "const favoritesCollectionRef = collection(db, FAVORITES_COLLECTION_NAME);",
+            "lineNumber": 35,
+            "content": "const favoritesCollectionRef = db.collection(FAVORITES_COLLECTION_NAME);",
             "pattern": "collection\\("
           },
           {
-            "lineNumber": 43,
-            "content": "const q = query(favoritesCollectionRef, orderBy(\"addedAt\", \"desc\"));",
-            "pattern": "query\\("
-          },
-          {
-            "lineNumber": 43,
-            "content": "const q = query(favoritesCollectionRef, orderBy(\"addedAt\", \"desc\"));",
+            "lineNumber": 36,
+            "content": "const q = favoritesCollectionRef.orderBy(\"addedAt\", \"desc\");",
             "pattern": "orderBy\\("
           },
           {
-            "lineNumber": 44,
-            "content": "const querySnapshot = await getDocs(q);",
-            "pattern": "getDocs\\("
-          },
-          {
-            "lineNumber": 76,
-            "content": "const favoriteDocRef = doc(db, FAVORITES_COLLECTION_NAME, favoriteId);",
+            "lineNumber": 70,
+            "content": "const favoriteDocRef = db.doc(`${FAVORITES_COLLECTION_NAME}/${favoriteId}`);",
             "pattern": "doc\\("
           },
           {
-            "lineNumber": 81,
-            "content": "addedAt: Timestamp.now(),",
-            "pattern": "Timestamp\\."
-          },
-          {
-            "lineNumber": 83,
-            "content": "await setDoc(favoriteDocRef, newFavorite);",
+            "lineNumber": 109,
+            "content": "const favoriteDocRef = db.doc(`${FAVORITES_COLLECTION_NAME}/${favoriteId}`);",
             "pattern": "doc\\("
-          },
-          {
-            "lineNumber": 83,
-            "content": "await setDoc(favoriteDocRef, newFavorite);",
-            "pattern": "setDoc\\("
-          },
-          {
-            "lineNumber": 114,
-            "content": "const favoriteDocRef = doc(db, FAVORITES_COLLECTION_NAME, favoriteId);",
-            "pattern": "doc\\("
-          },
-          {
-            "lineNumber": 115,
-            "content": "await deleteDoc(favoriteDocRef);",
-            "pattern": "doc\\("
-          },
-          {
-            "lineNumber": 115,
-            "content": "await deleteDoc(favoriteDocRef);",
-            "pattern": "deleteDoc\\("
           }
         ],
-        "totalLines": 173,
-        "firebaseLineCount": 16
+        "totalLines": 168,
+        "firebaseLineCount": 8
       },
       {
-        "file": "src\\contexts\\auth-context.tsx",
+        "file": "src/contexts/auth-context.tsx",
         "patterns": [
+          {
+            "pattern": "from.*firebase",
+            "matches": 1,
+            "examples": [
+              "from '@/lib/firebase"
+            ]
+          },
+          {
+            "pattern": "import.*firebase",
+            "matches": 1,
+            "examples": [
+              "import { auth, db } from '@/lib/firebase"
+            ]
+          },
+          {
+            "pattern": "@/lib/firebase",
+            "matches": 1,
+            "examples": [
+              "@/lib/firebase"
+            ]
+          },
           {
             "pattern": "doc\\(",
             "matches": 1,
             "examples": [
-              "Doc("
-            ]
-          },
-          {
-            "pattern": "setDoc\\(",
-            "matches": 1,
-            "examples": [
-              "setDoc("
+              "doc("
             ]
           }
         ],
         "lines": [
           {
-            "lineNumber": 121,
-            "content": "await dbAdapter.setDoc(`restaurants/${user.uid}`, newRestaurantData);",
-            "pattern": "doc\\("
+            "lineNumber": 6,
+            "content": "import { auth, db } from '@/lib/firebase';",
+            "pattern": "from.*firebase"
+          },
+          {
+            "lineNumber": 6,
+            "content": "import { auth, db } from '@/lib/firebase';",
+            "pattern": "import.*firebase"
+          },
+          {
+            "lineNumber": 6,
+            "content": "import { auth, db } from '@/lib/firebase';",
+            "pattern": "@/lib/firebase"
           },
           {
             "lineNumber": 121,
-            "content": "await dbAdapter.setDoc(`restaurants/${user.uid}`, newRestaurantData);",
-            "pattern": "setDoc\\("
+            "content": "const restaurantRef = db.doc(`restaurants/${user.uid}`);",
+            "pattern": "doc\\("
           }
         ],
-        "totalLines": 179,
-        "firebaseLineCount": 2
+        "totalLines": 180,
+        "firebaseLineCount": 4
+      },
+      {
+        "file": "src/lib/adapters/index.ts",
+        "patterns": [
+          {
+            "pattern": "onSnapshot\\(",
+            "matches": 4,
+            "examples": [
+              "onSnapshot(",
+              "onSnapshot(",
+              "onSnapshot("
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "lineNumber": 183,
+            "content": "onSnapshot(",
+            "pattern": "onSnapshot\\("
+          },
+          {
+            "lineNumber": 189,
+            "content": "return realtimeInstance.onCollectionSnapshot(",
+            "pattern": "onSnapshot\\("
+          },
+          {
+            "lineNumber": 197,
+            "content": "return super.onSnapshot(onNext, onError);",
+            "pattern": "onSnapshot\\("
+          },
+          {
+            "lineNumber": 204,
+            "content": "onSnapshot(",
+            "pattern": "onSnapshot\\("
+          }
+        ],
+        "totalLines": 297,
+        "firebaseLineCount": 4
+      },
+      {
+        "file": "src/lib/adapters/realtime-adapter.ts",
+        "patterns": [
+          {
+            "pattern": "collection\\(",
+            "matches": 3,
+            "examples": [
+              "Collection(",
+              "Collection(",
+              "Collection("
+            ]
+          },
+          {
+            "pattern": "onSnapshot\\(",
+            "matches": 1,
+            "examples": [
+              "onSnapshot("
+            ]
+          }
+        ],
+        "lines": [
+          {
+            "lineNumber": 79,
+            "content": "this.subscribeToCollection(listener.config);",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 225,
+            "content": "subscribeToCollection(config: SubscriptionConfig): void {",
+            "pattern": "collection\\("
+          },
+          {
+            "lineNumber": 247,
+            "content": "onCollectionSnapshot(",
+            "pattern": "onSnapshot\\("
+          },
+          {
+            "lineNumber": 266,
+            "content": "this.subscribeToCollection(config);",
+            "pattern": "collection\\("
+          }
+        ],
+        "totalLines": 414,
+        "firebaseLineCount": 4
       }
     ]
   },
   "detailedFindings": [
     {
-      "file": "src\\lib\\adapters\\database-adapter.ts",
-      "firebaseLineCount": 28,
-      "totalLines": 507,
+      "file": "src/lib/adapters/database-adapter.ts",
+      "firebaseLineCount": 27,
+      "totalLines": 527,
       "patterns": [
         {
           "pattern": "collection\\(",
-          "matches": 4,
+          "matches": 2,
           "examples": [
-            "collection(",
             "collection(",
             "collection("
           ]
@@ -2460,6 +4257,13 @@
             "onSnapshot(",
             "onSnapshot(",
             "onSnapshot("
+          ]
+        },
+        {
+          "pattern": "serverTimestamp\\(",
+          "matches": 1,
+          "examples": [
+            "serverTimestamp("
           ]
         },
         {
@@ -2492,117 +4296,60 @@
       ],
       "exampleLines": [
         {
-          "lineNumber": 205,
+          "lineNumber": 208,
           "content": "where(field: string, operator: string, value: any): Query {",
           "pattern": "where\\("
         },
         {
-          "lineNumber": 237,
+          "lineNumber": 240,
           "content": "return new Query(this.collection, newFilter, this.sortOptions, this.limitCount, this.offsetCount);",
           "pattern": "query\\("
         },
         {
-          "lineNumber": 240,
+          "lineNumber": 243,
           "content": "orderBy(field: string, direction: 'asc' | 'desc' = 'asc'): Query {",
           "pattern": "orderBy\\("
         },
         {
-          "lineNumber": 245,
+          "lineNumber": 248,
           "content": "return new Query(this.collection, this.filter, newSortOptions, this.limitCount, this.offsetCount);",
           "pattern": "query\\("
         },
         {
-          "lineNumber": 249,
+          "lineNumber": 252,
           "content": "return new Query(this.collection, this.filter, this.sortOptions, limit, this.offsetCount);",
           "pattern": "query\\("
         }
       ]
     },
     {
-      "file": "src\\contexts\\order-context.tsx",
-      "firebaseLineCount": 27,
-      "totalLines": 273,
+      "file": "src/lib/adapters/simple-database-adapter.ts",
+      "firebaseLineCount": 26,
+      "totalLines": 289,
       "patterns": [
         {
-          "pattern": "firebase/firestore",
-          "matches": 1,
-          "examples": [
-            "firebase/firestore"
-          ]
-        },
-        {
-          "pattern": "from.*firebase",
+          "pattern": "collection\\(",
           "matches": 2,
           "examples": [
-            "from '@/lib/firebase",
-            "from 'firebase"
-          ]
-        },
-        {
-          "pattern": "import.*firebase",
-          "matches": 1,
-          "examples": [
-            "import { db } from '@/lib/firebase"
-          ]
-        },
-        {
-          "pattern": "@/lib/firebase",
-          "matches": 1,
-          "examples": [
-            "@/lib/firebase"
-          ]
-        },
-        {
-          "pattern": "collection\\(",
-          "matches": 3,
-          "examples": [
-            "collection(",
             "collection(",
             "collection("
           ]
         },
         {
           "pattern": "doc\\(",
-          "matches": 6,
+          "matches": 3,
           "examples": [
-            "Doc(",
-            "Doc(",
+            "doc(",
+            "doc(",
             "doc("
           ]
         },
         {
-          "pattern": "getDoc\\(",
-          "matches": 1,
-          "examples": [
-            "getDoc("
-          ]
-        },
-        {
-          "pattern": "getDocs\\(",
-          "matches": 1,
-          "examples": [
-            "getDocs("
-          ]
-        },
-        {
-          "pattern": "addDoc\\(",
-          "matches": 1,
-          "examples": [
-            "addDoc("
-          ]
-        },
-        {
-          "pattern": "updateDoc\\(",
-          "matches": 2,
-          "examples": [
-            "updateDoc(",
-            "updateDoc("
-          ]
-        },
-        {
           "pattern": "onSnapshot\\(",
-          "matches": 1,
+          "matches": 3,
           "examples": [
+            "onSnapshot(",
+            "onSnapshot(",
             "onSnapshot("
           ]
         },
@@ -2614,60 +4361,63 @@
           ]
         },
         {
-          "pattern": "Timestamp\\.",
-          "matches": 2,
-          "examples": [
-            "Timestamp.",
-            "Timestamp."
-          ]
-        },
-        {
           "pattern": "query\\(",
-          "matches": 2,
+          "matches": 9,
           "examples": [
-            "query(",
-            "query("
+            "Query(",
+            "Query(",
+            "Query("
           ]
         },
         {
           "pattern": "orderBy\\(",
-          "matches": 2,
+          "matches": 4,
           "examples": [
             "orderBy(",
+            "orderBy(",
             "orderBy("
+          ]
+        },
+        {
+          "pattern": "where\\(",
+          "matches": 4,
+          "examples": [
+            "where(",
+            "where(",
+            "where("
           ]
         }
       ],
       "exampleLines": [
         {
-          "lineNumber": 7,
-          "content": "import { db } from '@/lib/firebase';",
-          "pattern": "from.*firebase"
+          "lineNumber": 105,
+          "content": "where(field: string, operator: string, value: any): Query {",
+          "pattern": "where\\("
         },
         {
-          "lineNumber": 7,
-          "content": "import { db } from '@/lib/firebase';",
-          "pattern": "import.*firebase"
+          "lineNumber": 107,
+          "content": "return new Query(this.collectionName, { ...this.filters, [field]: value }, this.sortOptions, this.limitCount);",
+          "pattern": "query\\("
         },
         {
-          "lineNumber": 7,
-          "content": "import { db } from '@/lib/firebase';",
-          "pattern": "@/lib/firebase"
+          "lineNumber": 110,
+          "content": "orderBy(field: string, direction: 'asc' | 'desc' = 'asc'): Query {",
+          "pattern": "orderBy\\("
         },
         {
-          "lineNumber": 21,
-          "content": "} from 'firebase/firestore';",
-          "pattern": "firebase/firestore"
+          "lineNumber": 112,
+          "content": "return new Query(this.collectionName, this.filters, { ...this.sortOptions, [field]: direction }, this.limitCount);",
+          "pattern": "query\\("
         },
         {
-          "lineNumber": 21,
-          "content": "} from 'firebase/firestore';",
-          "pattern": "from.*firebase"
+          "lineNumber": 117,
+          "content": "return new Query(this.collectionName, this.filters, this.sortOptions, limit);",
+          "pattern": "query\\("
         }
       ]
     },
     {
-      "file": "src\\app\\admin\\dashboard\\qrcodes\\page.tsx",
+      "file": "src/app/admin/dashboard/qrcodes/page.tsx",
       "firebaseLineCount": 25,
       "totalLines": 513,
       "patterns": [
@@ -2801,7 +4551,7 @@
       ]
     },
     {
-      "file": "src\\app\\merchant\\dashboard\\menu\\page.tsx",
+      "file": "src/app/merchant/dashboard/menu/page.tsx",
       "firebaseLineCount": 22,
       "totalLines": 324,
       "patterns": [
@@ -2904,9 +4654,9 @@
       ]
     },
     {
-      "file": "src\\contexts\\favorites-context.tsx",
-      "firebaseLineCount": 16,
-      "totalLines": 173,
+      "file": "src/contexts/order-context.tsx",
+      "firebaseLineCount": 15,
+      "totalLines": 266,
       "patterns": [
         {
           "pattern": "firebase/firestore",
@@ -2917,10 +4667,9 @@
         },
         {
           "pattern": "from.*firebase",
-          "matches": 2,
+          "matches": 1,
           "examples": [
-            "from '@/lib/firebase",
-            "from 'firebase"
+            "from '@/lib/firebase"
           ]
         },
         {
@@ -2939,93 +4688,82 @@
         },
         {
           "pattern": "collection\\(",
-          "matches": 1,
+          "matches": 3,
           "examples": [
+            "collection(",
+            "collection(",
             "collection("
           ]
         },
         {
           "pattern": "doc\\(",
-          "matches": 4,
+          "matches": 2,
           "examples": [
             "doc(",
-            "Doc(",
             "doc("
           ]
         },
         {
-          "pattern": "getDocs\\(",
+          "pattern": "onSnapshot\\(",
           "matches": 1,
           "examples": [
-            "getDocs("
+            "onSnapshot("
           ]
         },
         {
-          "pattern": "deleteDoc\\(",
+          "pattern": "serverTimestamp\\(",
           "matches": 1,
           "examples": [
-            "deleteDoc("
-          ]
-        },
-        {
-          "pattern": "setDoc\\(",
-          "matches": 1,
-          "examples": [
-            "setDoc("
+            "serverTimestamp("
           ]
         },
         {
           "pattern": "Timestamp\\.",
-          "matches": 1,
+          "matches": 2,
           "examples": [
+            "Timestamp.",
             "Timestamp."
           ]
         },
         {
-          "pattern": "query\\(",
-          "matches": 1,
-          "examples": [
-            "query("
-          ]
-        },
-        {
           "pattern": "orderBy\\(",
-          "matches": 1,
+          "matches": 2,
           "examples": [
+            "orderBy(",
             "orderBy("
           ]
         }
       ],
       "exampleLines": [
         {
-          "lineNumber": 8,
+          "lineNumber": 7,
           "content": "import { db } from '@/lib/firebase';",
           "pattern": "from.*firebase"
         },
         {
-          "lineNumber": 8,
+          "lineNumber": 7,
           "content": "import { db } from '@/lib/firebase';",
           "pattern": "import.*firebase"
         },
         {
-          "lineNumber": 8,
+          "lineNumber": 7,
           "content": "import { db } from '@/lib/firebase';",
           "pattern": "@/lib/firebase"
         },
         {
-          "lineNumber": 18,
-          "content": "} from 'firebase/firestore';",
+          "lineNumber": 9,
+          "content": "// 无需直接导入 firebase/firestore",
           "pattern": "firebase/firestore"
         },
         {
-          "lineNumber": 18,
-          "content": "} from 'firebase/firestore';",
-          "pattern": "from.*firebase"
+          "lineNumber": 47,
+          "content": "const ordersCollectionRef = db.collection(\"orders\");",
+          "pattern": "collection\\("
         }
       ]
     },
     {
-      "file": "src\\app\\admin\\dashboard\\merchants\\page.tsx",
+      "file": "src/app/admin/dashboard/merchants/page.tsx",
       "firebaseLineCount": 13,
       "totalLines": 197,
       "patterns": [
@@ -3132,7 +4870,7 @@
       ]
     },
     {
-      "file": "src\\app\\merchant\\dashboard\\promotions\\page.tsx",
+      "file": "src/app/merchant/dashboard/promotions/page.tsx",
       "firebaseLineCount": 12,
       "totalLines": 292,
       "patterns": [
@@ -3219,7 +4957,7 @@
       ]
     },
     {
-      "file": "src\\app\\merchant\\dashboard\\settings\\page.tsx",
+      "file": "src/app/merchant/dashboard/settings/page.tsx",
       "firebaseLineCount": 12,
       "totalLines": 586,
       "patterns": [
@@ -3306,7 +5044,7 @@
       ]
     },
     {
-      "file": "src\\lib\\adapters\\test-suite.ts",
+      "file": "src/lib/adapters/test-suite.ts",
       "firebaseLineCount": 12,
       "totalLines": 532,
       "patterns": [
@@ -3378,7 +5116,7 @@
       ]
     },
     {
-      "file": "src\\lib\\database.ts",
+      "file": "src/lib/database.ts",
       "firebaseLineCount": 12,
       "totalLines": 241,
       "patterns": [
@@ -3458,7 +5196,7 @@
       ]
     },
     {
-      "file": "src\\app\\restaurants\\page.tsx",
+      "file": "src/app/restaurants/page.tsx",
       "firebaseLineCount": 10,
       "totalLines": 173,
       "patterns": [
@@ -3550,7 +5288,7 @@
       ]
     },
     {
-      "file": "src\\app\\cart\\page.tsx",
+      "file": "src/app/cart/page.tsx",
       "firebaseLineCount": 9,
       "totalLines": 181,
       "patterns": [
@@ -3629,7 +5367,7 @@
       ]
     },
     {
-      "file": "src\\app\\checkout\\page.tsx",
+      "file": "src/app/checkout/page.tsx",
       "firebaseLineCount": 9,
       "totalLines": 409,
       "patterns": [
@@ -3708,7 +5446,7 @@
       ]
     },
     {
-      "file": "src\\app\\favorites\\page.tsx",
+      "file": "src/app/favorites/page.tsx",
       "firebaseLineCount": 9,
       "totalLines": 146,
       "patterns": [
@@ -3787,7 +5525,7 @@
       ]
     },
     {
-      "file": "src\\app\\restaurants\\[restaurantId]\\page.tsx",
+      "file": "src/app/restaurants/[restaurantId]/page.tsx",
       "firebaseLineCount": 9,
       "totalLines": 217,
       "patterns": [
@@ -3866,9 +5604,150 @@
       ]
     },
     {
-      "file": "src\\lib\\adapters\\index.ts",
+      "file": "src/contexts/favorites-context.tsx",
+      "firebaseLineCount": 8,
+      "totalLines": 168,
+      "patterns": [
+        {
+          "pattern": "firebase/firestore",
+          "matches": 1,
+          "examples": [
+            "firebase/firestore"
+          ]
+        },
+        {
+          "pattern": "from.*firebase",
+          "matches": 1,
+          "examples": [
+            "from '@/lib/firebase"
+          ]
+        },
+        {
+          "pattern": "import.*firebase",
+          "matches": 1,
+          "examples": [
+            "import { db } from '@/lib/firebase"
+          ]
+        },
+        {
+          "pattern": "@/lib/firebase",
+          "matches": 1,
+          "examples": [
+            "@/lib/firebase"
+          ]
+        },
+        {
+          "pattern": "collection\\(",
+          "matches": 1,
+          "examples": [
+            "collection("
+          ]
+        },
+        {
+          "pattern": "doc\\(",
+          "matches": 2,
+          "examples": [
+            "doc(",
+            "doc("
+          ]
+        },
+        {
+          "pattern": "orderBy\\(",
+          "matches": 1,
+          "examples": [
+            "orderBy("
+          ]
+        }
+      ],
+      "exampleLines": [
+        {
+          "lineNumber": 8,
+          "content": "import { db } from '@/lib/firebase';",
+          "pattern": "from.*firebase"
+        },
+        {
+          "lineNumber": 8,
+          "content": "import { db } from '@/lib/firebase';",
+          "pattern": "import.*firebase"
+        },
+        {
+          "lineNumber": 8,
+          "content": "import { db } from '@/lib/firebase';",
+          "pattern": "@/lib/firebase"
+        },
+        {
+          "lineNumber": 10,
+          "content": "// 无需直接导入 firebase/firestore",
+          "pattern": "firebase/firestore"
+        },
+        {
+          "lineNumber": 35,
+          "content": "const favoritesCollectionRef = db.collection(FAVORITES_COLLECTION_NAME);",
+          "pattern": "collection\\("
+        }
+      ]
+    },
+    {
+      "file": "src/contexts/auth-context.tsx",
       "firebaseLineCount": 4,
-      "totalLines": 280,
+      "totalLines": 180,
+      "patterns": [
+        {
+          "pattern": "from.*firebase",
+          "matches": 1,
+          "examples": [
+            "from '@/lib/firebase"
+          ]
+        },
+        {
+          "pattern": "import.*firebase",
+          "matches": 1,
+          "examples": [
+            "import { auth, db } from '@/lib/firebase"
+          ]
+        },
+        {
+          "pattern": "@/lib/firebase",
+          "matches": 1,
+          "examples": [
+            "@/lib/firebase"
+          ]
+        },
+        {
+          "pattern": "doc\\(",
+          "matches": 1,
+          "examples": [
+            "doc("
+          ]
+        }
+      ],
+      "exampleLines": [
+        {
+          "lineNumber": 6,
+          "content": "import { auth, db } from '@/lib/firebase';",
+          "pattern": "from.*firebase"
+        },
+        {
+          "lineNumber": 6,
+          "content": "import { auth, db } from '@/lib/firebase';",
+          "pattern": "import.*firebase"
+        },
+        {
+          "lineNumber": 6,
+          "content": "import { auth, db } from '@/lib/firebase';",
+          "pattern": "@/lib/firebase"
+        },
+        {
+          "lineNumber": 121,
+          "content": "const restaurantRef = db.doc(`restaurants/${user.uid}`);",
+          "pattern": "doc\\("
+        }
+      ]
+    },
+    {
+      "file": "src/lib/adapters/index.ts",
+      "firebaseLineCount": 4,
+      "totalLines": 297,
       "patterns": [
         {
           "pattern": "onSnapshot\\(",
@@ -3882,29 +5761,29 @@
       ],
       "exampleLines": [
         {
-          "lineNumber": 166,
+          "lineNumber": 183,
           "content": "onSnapshot(",
           "pattern": "onSnapshot\\("
         },
         {
-          "lineNumber": 172,
+          "lineNumber": 189,
           "content": "return realtimeInstance.onCollectionSnapshot(",
           "pattern": "onSnapshot\\("
         },
         {
-          "lineNumber": 180,
+          "lineNumber": 197,
           "content": "return super.onSnapshot(onNext, onError);",
           "pattern": "onSnapshot\\("
         },
         {
-          "lineNumber": 187,
+          "lineNumber": 204,
           "content": "onSnapshot(",
           "pattern": "onSnapshot\\("
         }
       ]
     },
     {
-      "file": "src\\lib\\adapters\\realtime-adapter.ts",
+      "file": "src/lib/adapters/realtime-adapter.ts",
       "firebaseLineCount": 4,
       "totalLines": 414,
       "patterns": [
@@ -3945,39 +5824,6 @@
           "lineNumber": 266,
           "content": "this.subscribeToCollection(config);",
           "pattern": "collection\\("
-        }
-      ]
-    },
-    {
-      "file": "src\\contexts\\auth-context.tsx",
-      "firebaseLineCount": 2,
-      "totalLines": 179,
-      "patterns": [
-        {
-          "pattern": "doc\\(",
-          "matches": 1,
-          "examples": [
-            "Doc("
-          ]
-        },
-        {
-          "pattern": "setDoc\\(",
-          "matches": 1,
-          "examples": [
-            "setDoc("
-          ]
-        }
-      ],
-      "exampleLines": [
-        {
-          "lineNumber": 121,
-          "content": "await dbAdapter.setDoc(`restaurants/${user.uid}`, newRestaurantData);",
-          "pattern": "doc\\("
-        },
-        {
-          "lineNumber": 121,
-          "content": "await dbAdapter.setDoc(`restaurants/${user.uid}`, newRestaurantData);",
-          "pattern": "setDoc\\("
         }
       ]
     }
