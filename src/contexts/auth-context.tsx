@@ -3,8 +3,9 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
-import { AuthAdapter, type User, type AuthError } from '@/lib/adapters/auth-adapter';
-import { DatabaseAdapter } from '@/lib/adapters/database-adapter';
+import { auth, db } from '@/lib/firebase';
+// 使用统一的适配器系统
+import type { User, AuthError } from '@/lib/adapters/auth-adapter';
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from 'next/navigation';
 import type { Restaurant, RestaurantStatus } from '@/types';
@@ -30,9 +31,8 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 // 管理员邮箱列表
 const ADMIN_EMAILS = ['admin@t.com', 'your-admin-email@domain.com'];
 
-// 初始化适配器
-const authAdapter = new AuthAdapter();
-const dbAdapter = new DatabaseAdapter();
+// 使用统一的适配器实例
+// authAdapter 和 dbAdapter 现在通过 firebase.ts 的 auth 和 db 提供
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
@@ -55,7 +55,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     // 监听认证状态变化
-    const unsubscribe = authAdapter.onAuthStateChanged(async (user) => {
+    const unsubscribe = auth.onAuthStateChanged(async (user) => {
       setCurrentUser(user);
       await checkAdminStatus(user);
       setLoadingAuth(false);
@@ -74,7 +74,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setLoadingAuth(true);
     setError(null);
     try {
-      const userCredential = await authAdapter.signInWithEmailAndPassword(email, password);
+      const userCredential = await auth.signInWithEmailAndPassword(email, password);
       toast({ title: "登录成功", description: "欢迎回来！" });
       setLoadingAuth(false);
       return userCredential.user;
@@ -97,7 +97,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setLoadingAuth(true);
     setError(null);
     try {
-      const userCredential = await authAdapter.createUserWithEmailAndPassword(email, password);
+      const userCredential = await auth.createUserWithEmailAndPassword(email, password);
       const user = userCredential.user;
 
       const newRestaurantData: Restaurant = { 
@@ -117,8 +117,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         status: 'Pending' as RestaurantStatus,
       };
       
-      // 使用数据库适配器保存餐厅信息
-      await dbAdapter.setDoc(`restaurants/${user.uid}`, newRestaurantData);
+      // 使用统一数据库适配器保存餐厅信息
+      const restaurantRef = db.doc(`restaurants/${user.uid}`);
+      await restaurantRef.set(newRestaurantData);
 
       toast({ title: "注册成功!", description: "您的餐馆已创建。等待管理员审核。" });
       setLoadingAuth(false);
@@ -137,7 +138,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setLoadingAuth(true);
     setError(null);
     try {
-      await authAdapter.signOut();
+      await auth.signOut();
       toast({ title: "已登出", description: "您已成功登出。" });
     } catch (err) {
       const authError = err as AuthError;

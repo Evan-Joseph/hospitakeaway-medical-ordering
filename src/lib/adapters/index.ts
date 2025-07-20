@@ -4,7 +4,7 @@
  * 提供与 Firebase 完全兼容的接口，但底层使用 MongoDB + JWT + OSS + WebSocket
  */
 
-import DatabaseAdapter, {
+import SimpleDatabaseAdapter, {
   collection,
   doc,
   query,
@@ -19,14 +19,15 @@ import DatabaseAdapter, {
   deleteDoc,
   serverTimestamp,
   Timestamp,
-  arrayUnion,
-  arrayRemove,
   type DocumentSnapshot,
   type QuerySnapshot,
   type DocumentReference,
   type CollectionReference,
   type Query
-} from './database-adapter';
+} from './simple-database-adapter';
+
+// 保留原有适配器作为备用
+// import DatabaseAdapter from './database-adapter';
 
 import AuthAdapter, {
   getAuth,
@@ -88,7 +89,7 @@ interface AdapterConfig {
 let config: AdapterConfig;
 
 // 全局实例
-let dbInstance: DatabaseAdapter | null = null;
+let dbInstance: SimpleDatabaseAdapter | null = null;
 let authInstance: AuthAdapter | null = null;
 let storageInstance: StorageAdapter | null = null;
 let realtimeInstance: RealtimeAdapter | null = null;
@@ -97,15 +98,13 @@ let realtimeInstance: RealtimeAdapter | null = null;
 export const initializeAdapters = async (adapterConfig: AdapterConfig): Promise<void> => {
   config = adapterConfig;
   
-  // 初始化数据库适配器
-  if (config.enableNewServices.database) {
-    dbInstance = new DatabaseAdapter(
-      config.mongodb.connectionString,
-      config.mongodb.databaseName
-    );
-    await dbInstance.connect();
-    console.log('✅ 数据库适配器已初始化');
-  }
+  // 初始化简化数据库适配器
+  dbInstance = new SimpleDatabaseAdapter(
+    config.mongodb.connectionString,
+    config.mongodb.databaseName
+  );
+  await dbInstance.connect();
+  console.log('✅ 简化数据库适配器已初始化');
   
   // 初始化认证适配器
   if (config.enableNewServices.auth) {
@@ -130,9 +129,12 @@ export const initializeAdapters = async (adapterConfig: AdapterConfig): Promise<
 };
 
 // 获取数据库实例
-export const getDatabase = (): DatabaseAdapter => {
+export const getDatabase = (): SimpleDatabaseAdapter => {
   if (!dbInstance) {
-    throw new Error('数据库适配器未初始化，请先调用 initializeAdapters()');
+    // 在没有初始化的情况下，创建简化实例
+    console.warn('⚠️ 数据库适配器未初始化，创建简化实例');
+    dbInstance = new SimpleDatabaseAdapter();
+    dbInstance.connect();
   }
   return dbInstance;
 };
@@ -140,7 +142,14 @@ export const getDatabase = (): DatabaseAdapter => {
 // 获取认证实例
 export const getAuthentication = (): AuthAdapter => {
   if (!authInstance) {
-    throw new Error('认证适配器未初始化，请先调用 initializeAdapters()');
+    console.warn('⚠️ 认证适配器未初始化，尝试创建默认实例');
+    try {
+      const apiBaseUrl = process.env.AUTH_API_URL || 'http://localhost:9002';
+      authInstance = new AuthAdapter(apiBaseUrl);
+      return authInstance;
+    } catch (error) {
+      throw new Error(`认证适配器创建失败: ${error}`);
+    }
   }
   return authInstance;
 };
@@ -148,7 +157,15 @@ export const getAuthentication = (): AuthAdapter => {
 // 获取存储实例
 export const getStorageAdapter = (): StorageAdapter => {
   if (!storageInstance) {
-    throw new Error('存储适配器未初始化，请先调用 initializeAdapters()');
+    console.warn('⚠️ 存储适配器未初始化，尝试创建默认实例');
+    try {
+      const apiBaseUrl = process.env.STORAGE_API_URL || 'http://localhost:9002';
+      const defaultBucket = process.env.OSS_BUCKET || 'hospitakeaway-storage';
+      storageInstance = new StorageAdapter(apiBaseUrl, defaultBucket);
+      return storageInstance;
+    } catch (error) {
+      throw new Error(`存储适配器创建失败: ${error}`);
+    }
   }
   return storageInstance;
 };

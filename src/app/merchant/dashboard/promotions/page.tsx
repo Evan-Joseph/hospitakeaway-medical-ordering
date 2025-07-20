@@ -6,7 +6,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/auth-context';
 import { db } from '@/lib/firebase';
-import { doc, getDoc, updateDoc } from 'firebase/firestore';
+// 移除Firebase导入 - 使用适配器系统
 import type { Restaurant, Promotion } from '@/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -54,12 +54,13 @@ export default function MerchantPromotionsPage() {
     const restaurantId = currentUser.uid;
 
     try {
-      const restaurantRef = doc(db, "restaurants", restaurantId);
-      const docSnap = await getDoc(restaurantRef);
+      // 使用适配器系统获取餐厅数据
+      const restaurantRef = db.doc(`restaurants/${restaurantId}`);
+      const docSnap = await restaurantRef.get();
       if (docSnap.exists()) {
-        const data = docSnap.data() as Restaurant;
+        const data = docSnap.data() as any;
         setRestaurant(data);
-        setPromotions(data.promotions || []);
+        setPromotions(data?.promotions || []);
       } else {
         setPageError("未找到您的餐馆数据。无法管理促销活动。");
         setRestaurant(null);
@@ -96,8 +97,9 @@ export default function MerchantPromotionsPage() {
     }
     setIsSubmitting(true);
     try {
-      const restaurantRef = doc(db, "restaurants", currentUser.uid);
-      await updateDoc(restaurantRef, { promotions: promotions });
+      // 使用适配器系统更新促销数据
+      const restaurantRef = db.doc(`restaurants/${currentUser.uid}`);
+      await restaurantRef.update({ promotions: promotions });
       toast({ title: "成功", description: "促销活动已成功更新并保存至数据库。" });
     } catch (err) {
       console.error("保存促销出错:", err);

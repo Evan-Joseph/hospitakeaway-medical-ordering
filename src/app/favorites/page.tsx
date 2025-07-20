@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import { HeartCrack, Utensils, Loader2, AlertTriangle } from 'lucide-react';
 import type { MenuItem, Restaurant as RestaurantType } from '@/types';
 import { db } from '@/lib/firebase';
-import { doc, getDoc } from 'firebase/firestore';
+// 移除Firebase导入 - 使用适配器系统
 import { Skeleton } from '@/components/ui/skeleton';
 
 const CardSkeleton = () => (
@@ -39,10 +39,12 @@ export default function FavoritesPage() {
           try {
             let restaurantDoc: RestaurantType | undefined = restaurantCache.get(fav.restaurantId);
             if (!restaurantDoc) {
-              const docRef = doc(db, "restaurants", fav.restaurantId);
-              const docSnap = await getDoc(docRef);
+              // 使用适配器系统获取餐厅数据
+              const docRef = db.doc(`restaurants/${fav.restaurantId}`);
+              const docSnap = await docRef.get();
               if (docSnap.exists()) {
-                restaurantDoc = { id: docSnap.id, ...docSnap.data() } as RestaurantType;
+                const data = docSnap.data() as any;
+                restaurantDoc = { id: docSnap.id, ...data } as RestaurantType;
                 if (restaurantDoc) restaurantCache.set(fav.restaurantId, restaurantDoc);
               } else {
                 console.warn(`餐馆 ${fav.restaurantId} 未找到，对应收藏商品 ${fav.itemId}`);

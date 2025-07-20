@@ -11,7 +11,7 @@ import { ShoppingCart, Trash2, ArrowRight, Utensils, Loader2, Tag } from 'lucide
 import { Table, TableBody, TableHead, TableHeader, TableRow, TableCell } from "@/components/ui/table";
 import { Separator } from "@/components/ui/separator";
 import { db } from '@/lib/firebase';
-import { doc, getDoc } from 'firebase/firestore';
+// 移除Firebase导入 - 使用适配器系统
 import type { Restaurant, Promotion } from '@/types';
 
 export default function CartPage() {
@@ -32,10 +32,12 @@ export default function CartPage() {
       setLoadingRestaurant(true);
       const fetchRestaurantDetails = async () => {
         try {
-          const restaurantDocRef = doc(db, "restaurants", restaurantId);
-          const docSnap = await getDoc(restaurantDocRef);
+          // 使用适配器系统获取餐厅详情
+          const restaurantDocRef = db.doc(`restaurants/${restaurantId}`);
+          const docSnap = await restaurantDocRef.get();
           if (docSnap.exists()) {
-            const restaurantData = { id: docSnap.id, ...docSnap.data(), promotions: docSnap.data()?.promotions || [] } as Restaurant;
+            const data = docSnap.data() as any;
+            const restaurantData = { id: docSnap.id, ...data, promotions: data?.promotions || [] } as Restaurant;
             setRestaurantDetails(restaurantData);
           } else {
             setRestaurantDetails(null);

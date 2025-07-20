@@ -16,7 +16,7 @@ import { MapPin, ShoppingBag, CreditCard, CircleDollarSign, AlertTriangle, Arrow
 import type { Order, CartItemType, OrderStatus as OrderStatusValue, Restaurant as RestaurantType, RestaurantPaymentMethod, Promotion } from '@/types';
 import { useToast } from '@/hooks/use-toast';
 import { db } from '@/lib/firebase';
-import { doc, getDoc } from 'firebase/firestore';
+// 移除Firebase导入 - 使用适配器系统
 import { Separator } from '@/components/ui/separator';
 
 // Helper for status translation
@@ -67,11 +67,12 @@ export default function CheckoutPage() {
       setLoadingRestaurant(true);
       const fetchRestaurantDetails = async () => {
         try {
-          const restaurantDocRef = doc(db, "restaurants", cartRestaurantId);
-          const docSnap = await getDoc(restaurantDocRef);
+          // 使用适配器系统获取餐厅详情
+          const restaurantDocRef = db.doc(`restaurants/${cartRestaurantId}`);
+          const docSnap = await restaurantDocRef.get();
           if (docSnap.exists()) {
-            const data = docSnap.data() as RestaurantType;
-            setRestaurantDetails({ ...data, promotions: data.promotions || [] });
+            const data = docSnap.data() as any;
+            setRestaurantDetails({ ...data, promotions: data?.promotions || [] });
           } else {
             toast({ title: "餐馆信息缺失!", description: "无法加载餐馆信息，请返回购物车。", variant: "destructive"});
             setRestaurantDetails(null);

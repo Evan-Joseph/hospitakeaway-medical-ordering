@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Users, ArrowLeft, ListChecks, Construction, Loader2 } from "lucide-react";
 import { db } from "@/lib/firebase";
-import { collection, getDocs, query, orderBy as firestoreOrderBy, doc, updateDoc } from "firebase/firestore";
+// 所有数据库操作方法现在通过适配器系统提供
 import type { Restaurant, RestaurantStatus } from "@/types";
 import { useToast } from "@/hooks/use-toast";
 
@@ -58,9 +58,9 @@ export default function AdminMerchantsPage() {
   const fetchMerchants = async () => {
     setIsLoading(true);
     try {
-      const restaurantsCollectionRef = collection(db, "restaurants");
-      const q = query(restaurantsCollectionRef, firestoreOrderBy("name"));
-      const querySnapshot = await getDocs(q);
+      const restaurantsCollection = db.collection("restaurants");
+      const q = restaurantsCollection.orderBy("name");
+      const querySnapshot = await q.get();
       const fetchedMerchants = querySnapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data()
@@ -77,8 +77,8 @@ export default function AdminMerchantsPage() {
   const handleStatusChange = async (restaurantId: string, newStatus: RestaurantStatus) => {
     setIsUpdatingStatus(restaurantId);
     try {
-      const restaurantRef = doc(db, "restaurants", restaurantId);
-      await updateDoc(restaurantRef, { status: newStatus });
+      const restaurantRef = db.doc(`restaurants/${restaurantId}`);
+      await restaurantRef.update({ status: newStatus });
       setMerchants(prevMerchants =>
         prevMerchants.map(merchant =>
           merchant.id === restaurantId ? { ...merchant, status: newStatus } : merchant

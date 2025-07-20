@@ -13,8 +13,10 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, ShoppingCart, Star, Clock, Utensils, AlertTriangle, Loader2, Info, Tag } from 'lucide-react';
 import { useCart } from '@/contexts/cart-context';
 import { Skeleton } from '@/components/ui/skeleton';
+import { toast } from "@/hooks/use-toast";
 import { db } from '@/lib/firebase';
-import { doc, getDoc } from 'firebase/firestore';
+// 移除Firebase导入 - 使用适配器系统
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const CardSkeleton = () => (
   <div className="border rounded-lg p-4 space-y-3">
@@ -44,16 +46,17 @@ export default function RestaurantMenuPage() {
         setLoading(true);
         setError(null);
         try {
-          const restaurantDocRef = doc(db, "restaurants", restaurantId);
-          const docSnap = await getDoc(restaurantDocRef);
+          // 使用适配器系统获取餐厅数据
+          const restaurantDocRef = db.doc(`restaurants/${restaurantId}`);
+          const docSnap = await restaurantDocRef.get();
 
           if (docSnap.exists()) {
-            const data = docSnap.data() as Omit<RestaurantType, 'id'>;
+            const data = docSnap.data() as any;
             setRestaurant({ 
               id: docSnap.id, 
               ...data,
-              menu: data.menu?.filter(item => item.isAvailable !== false) || [], 
-              promotions: data.promotions || [] 
+              menu: data?.menu?.filter((item: any) => item.isAvailable !== false) || [], 
+              promotions: data?.promotions || [] 
             } as RestaurantType);
           } else {
             setError("餐馆未找到。");
